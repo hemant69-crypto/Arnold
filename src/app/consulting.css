@@ -1,0 +1,1012 @@
+/* Consulting extends Arnold's existing type, atmosphere and editorial surfaces. */
+.consulting-page {
+  background: #000;
+  color: #fff;
+}
+.consulting-page [id] {
+  scroll-margin-top: 0;
+}
+.consulting-section {
+  padding: clamp(84px, 8vw, 145px) var(--gutter);
+}
+.consulting-light {
+  background: #fff;
+  color: #000;
+}
+.consulting-note {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+.consulting-number {
+  font-size: 12px;
+  line-height: 1.6;
+  padding-top: 5px;
+}
+.consulting-prose {
+  font-size: 16px;
+  line-height: 1.85;
+}
+.consulting-prose p + p {
+  margin-top: 22px;
+}
+.consulting-section h2 {
+  font-size: clamp(42px, 4.9vw, 74px);
+  max-width: 17ch;
+  text-wrap: balance;
+}
+.consulting-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 8vw;
+  margin-bottom: 64px;
+}
+.consulting-section-head > .consulting-note {
+  grid-column: 1 / -1;
+}
+.consulting-section-head > .consulting-prose {
+  align-self: end;
+  max-width: 56ch;
+}
+.consulting-hero {
+  position: relative;
+  min-height: max(900px, 100svh);
+  padding: 185px var(--gutter) 135px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.consulting-category {
+  font-size: 13px;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+.consulting-hero h1 {
+  font-size: clamp(58px, 6.7vw, 104px);
+  line-height: 1.06;
+  letter-spacing: -0.06em;
+  max-width: 1100px;
+  text-align: center;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+.consulting-descriptor {
+  font-size: clamp(18px, 1.65vw, 24px);
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 30px auto 0;
+  text-align: center;
+}
+.consulting-hero-lower {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7vw;
+  width: 100%;
+  max-width: 1140px;
+  margin: 55px auto 0;
+}
+.consulting-hero-lower > p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 475px;
+}
+.consulting-hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.consulting-hero-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  font-size: 11px;
+  line-height: 1.65;
+}
+.consulting-hero-bottom > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+}
+.consulting-hero-bottom > a svg {
+  transform: rotate(90deg);
+}
+.consulting-contents {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 26px;
+  padding: 18px 135px 18px var(--gutter);
+  min-height: 78px;
+  background: #fff;
+  color: #000;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.consulting-contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+}
+.consulting-contents a[aria-current="location"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.consulting-point {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 8vw;
+}
+.consulting-point .consulting-section-head {
+  display: block;
+  margin-bottom: 0;
+}
+.consulting-lead {
+  font-size: 24px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+  margin-bottom: 35px;
+}
+.consulting-pull {
+  font-size: clamp(27px, 2.5vw, 38px);
+  line-height: 1.25;
+  letter-spacing: -0.045em;
+  margin-top: 45px;
+  max-width: 23ch;
+}
+.consulting-priorities {
+  border-top: 1px solid var(--line);
+}
+.consulting-situations {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 6vw;
+}
+.consulting-situation {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 22px;
+  gap: 18px;
+  align-items: start;
+  padding: 32px 0;
+  border-top: 1px solid #c7cbd0;
+}
+.consulting-situation h3 {
+  font-size: clamp(24px, 2.1vw, 31px);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.consulting-situation p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.consulting-situation > svg {
+  margin-top: 5px;
+  transition: transform 0.25s;
+}
+.consulting-situation:hover {
+  text-decoration: none;
+}
+.consulting-situation:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+.consulting-situation:hover > svg {
+  transform: translate(3px, -3px);
+}
+.consulting-advisory-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 8vw;
+  margin-bottom: 100px;
+}
+.consulting-advisory-intro > .consulting-note {
+  grid-column: 1 / -1;
+}
+.consulting-advisory-intro > .consulting-prose {
+  align-self: end;
+}
+.consulting-advisory .consulting-prose {
+  color: #cbd0d8;
+}
+.consulting-advisory-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(0, 1.8fr);
+  gap: 9vw;
+}
+.consulting-area-nav {
+  position: sticky;
+  align-self: start;
+  top: 120px;
+}
+.consulting-area-nav a {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 18px;
+  padding: 17px 0;
+  border-top: 1px solid #fff4;
+  color: #b8bdc7;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 56px;
+}
+.consulting-area-nav a > span:first-child {
+  font-size: 11px;
+  padding-top: 3px;
+}
+.consulting-area-nav a[aria-current="location"] {
+  color: #fff;
+  border-color: #fff;
+}
+.consulting-area-nav > p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #b8bdc7;
+  margin-top: 40px;
+}
+.consulting-advisory-item {
+  border-top: 1px solid #fff5;
+  padding-top: 32px;
+  margin-bottom: 78px;
+}
+.consulting-advisory-item:last-child {
+  margin-bottom: 0;
+}
+.consulting-advisory-item > .consulting-note {
+  color: #b8bdc7;
+  margin-bottom: 24px;
+}
+.consulting-advisory-item h3 {
+  font-size: clamp(35px, 3.6vw, 54px);
+  max-width: 23ch;
+  line-height: 1.12;
+  margin-bottom: 32px;
+  text-wrap: balance;
+}
+.consulting-focus {
+  margin-top: 30px;
+}
+.consulting-focus > p,
+.consulting-related > p {
+  color: #b8bdc7;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+.consulting-focus ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.consulting-focus li {
+  border-bottom: 1px solid #fff3;
+  padding-bottom: 4px;
+}
+.consulting-related {
+  margin-top: 30px;
+}
+.consulting-related > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 24px;
+}
+.consulting-related a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 13px;
+}
+.consulting-related svg {
+  width: 16px;
+  height: 16px;
+}
+.consulting-film {
+  --film-inset: 0%;
+  background: #000;
+}
+.consulting-film .section-video {
+  background: #000;
+}
+.consulting-film .section-video picture,
+.consulting-film .section-video video,
+.consulting-film .cinema-shade {
+  clip-path: inset(0 var(--film-inset));
+}
+.consulting-output-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 8vw;
+  align-items: start;
+}
+.consulting-priority-map {
+  position: sticky;
+  top: 120px;
+  padding: 28px;
+  background: #f1f3f6;
+}
+.consulting-priority-map figcaption {
+  font-size: 20px;
+  letter-spacing: -0.025em;
+}
+.consulting-priority-map figcaption span {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0;
+  margin-top: 5px;
+  color: #515865;
+}
+.consulting-map-graphic {
+  position: relative;
+  height: 430px;
+  margin: 30px 0;
+}
+.consulting-map-graphic svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.consulting-map-graphic path {
+  stroke: #4e68d8;
+  stroke-width: 1.5;
+  fill: none;
+}
+.consulting-map-graphic p {
+  background: #fff;
+  padding: 16px 10px;
+  border: 1px solid #c7cdd7;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+}
+.map-origin,
+.map-result {
+  position: absolute;
+  width: 62%;
+  left: 19%;
+}
+.map-origin {
+  top: 0;
+}
+.map-result {
+  bottom: 0;
+}
+.map-branches {
+  position: absolute;
+  inset: 175px 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.consulting-map-caption {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #515865;
+}
+.consulting-output {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 24px;
+  border-top: 1px solid #c7cbd0;
+  padding: 25px 0 30px;
+}
+.consulting-output h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.consulting-output p {
+  font-size: 16px;
+  line-height: 1.85;
+}
+.consulting-output-list > p {
+  border-top: 1px solid #c7cbd0;
+  padding-top: 28px;
+}
+.consulting-journey {
+  border-top: 1px solid var(--line);
+}
+.consulting-stages {
+  --journey-progress: 1;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 45px;
+}
+.consulting-stages::before,
+.consulting-stages::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 80px;
+  left: 15px;
+  width: 2px;
+  background: #d6d8dc;
+}
+.consulting-stages::after {
+  background: #4e68d8;
+  transform: scaleY(var(--journey-progress));
+  transform-origin: top;
+}
+.consulting-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 34px;
+  padding: 32px 0 40px;
+}
+.consulting-stage-number {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #c7cbd0;
+  border-radius: 50%;
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+}
+.consulting-stage h3 {
+  font-size: clamp(28px, 2.6vw, 40px);
+  line-height: 1.15;
+  padding-top: 0;
+  max-width: 17ch;
+}
+.consulting-stage .consulting-decision {
+  margin-top: 25px;
+  padding-left: 20px;
+  border-left: 1px solid #a8b0bf;
+  color: #454c58;
+  font-size: 14px;
+}
+.consulting-decision span {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 9px;
+}
+.consulting-journey > .link-button {
+  margin-left: 66px;
+}
+.consulting-gcc {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 10vw;
+}
+.consulting-gcc-copy > h2 {
+  margin-bottom: 40px;
+}
+.consulting-gcc-copy .consulting-prose {
+  color: #cbd0d8;
+}
+.consulting-gcc-copy > .link-button {
+  margin-top: 40px;
+}
+.consulting-gcc-sequence {
+  position: sticky;
+  top: 125px;
+  align-self: start;
+  padding-top: 15px;
+}
+.consulting-gcc-sequence figcaption {
+  font-size: 13px;
+  color: #b8bdc7;
+  margin-bottom: 40px;
+}
+.consulting-gcc-sequence ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.consulting-gcc-sequence li {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 25px;
+  padding: 0 0 56px;
+  font-size: clamp(23px, 2.2vw, 34px);
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+}
+.consulting-gcc-sequence li > span:first-child {
+  font-size: 11px;
+  letter-spacing: 0;
+  color: #b8bdc7;
+}
+.consulting-sequence-line {
+  position: absolute;
+  top: 36px;
+  bottom: 14px;
+  left: 6px;
+  width: 1px;
+  background: #fff5;
+}
+.consulting-gcc-sequence > p {
+  border-top: 1px solid #fff4;
+  padding-top: 30px;
+  font-size: 13px;
+  color: #b8bdc7;
+}
+.consulting-service-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1.1fr) minmax(0, 1fr) 22px;
+  gap: 30px;
+  align-items: start;
+  padding: 30px 0;
+  border-top: 1px solid #c7cbd0;
+}
+.consulting-service-row h3 {
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.15;
+}
+.consulting-service-row > p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.consulting-service-row > svg {
+  margin-top: 5px;
+}
+.consulting-service-row:hover {
+  text-decoration: none;
+}
+.consulting-service-row:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+.consulting-capabilities-end {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: 45px;
+}
+.consulting-capabilities-end > p {
+  font-size: 15px;
+  max-width: 50ch;
+}
+.consulting-principles {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 8vw;
+}
+.consulting-principles-copy > h2 {
+  margin-bottom: 48px;
+}
+.consulting-principle {
+  border-top: 1px solid #fff4;
+  padding-top: 25px;
+  margin-bottom: 30px;
+}
+.consulting-principle h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  line-height: 1.25;
+}
+.consulting-principle p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #cbd0d8;
+}
+.consulting-secondary-film {
+  position: sticky;
+  top: 115px;
+  align-self: start;
+}
+.consulting-secondary-film .section-video {
+  height: 700px;
+  min-height: 620px;
+  max-height: 85svh;
+}
+.consulting-secondary-film .cinema-copy {
+  left: 24px;
+  right: 24px;
+}
+.consulting-secondary-film .cinema-copy h3 {
+  font-size: clamp(35px, 3vw, 48px);
+  line-height: 1.12;
+}
+.consulting-secondary-film .cinema-control {
+  right: 24px;
+}
+.consulting-secondary-film .cinema-credit {
+  left: 24px;
+}
+.consulting-film-caption {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #b8bdc7;
+}
+.consulting-perspectives {
+  border-top: 1px solid #fff4;
+}
+.consulting-questions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 8vw;
+}
+.consulting-questions h2 {
+  margin-bottom: 30px;
+}
+.consulting-questions > div:first-child > p:last-child {
+  font-size: 16px;
+  max-width: 34ch;
+}
+.consulting-faq {
+  margin-bottom: 0;
+}
+.consulting-faq summary {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5;
+  padding: 25px 50px 25px 0;
+}
+.consulting-faq p {
+  font-size: 16px;
+  line-height: 1.85;
+  padding-bottom: 25px;
+  margin-top: 0;
+}
+.consulting-closing {
+  text-align: center;
+  padding-block: clamp(100px, 11vw, 180px);
+}
+.consulting-closing .consulting-note {
+  margin-inline: auto;
+}
+.consulting-closing h2 {
+  max-width: 16ch;
+  margin: 0 auto 35px;
+  font-size: clamp(46px, 6vw, 88px);
+}
+.consulting-closing .consulting-prose {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #cbd0d8;
+}
+.consulting-closing .consulting-prose p {
+  margin-inline: auto;
+}
+.consulting-closing > .link-button {
+  background: #fff;
+  color: #000;
+}
+.consulting-closing > .link-button:hover {
+  background: #000;
+  color: #fff;
+}
+@media (min-width: 1600px) {
+  .consulting-section {
+    padding-inline: max(var(--gutter), calc((100vw - 1480px) / 2));
+  }
+}
+@media (max-width: 1100px) {
+  .consulting-contents {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5px 24px;
+    font-size: 11px;
+    padding-block: 12px;
+  }
+  .consulting-advisory-layout {
+    grid-template-columns: minmax(200px, 1fr) minmax(0, 1.8fr);
+    gap: 6vw;
+  }
+  .consulting-area-nav {
+    top: 150px;
+  }
+  .consulting-priority-map {
+    padding: 20px;
+    top: 150px;
+  }
+  .consulting-map-graphic p {
+    font-size: 12px;
+    padding-inline: 5px;
+  }
+  .consulting-secondary-film .section-video {
+    min-height: 640px;
+  }
+}
+@media (max-width: 900px) {
+  .consulting-advisory-layout {
+    display: block;
+  }
+  .consulting-area-nav {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+    margin-bottom: 65px;
+  }
+  .consulting-area-nav > p {
+    display: none;
+  }
+  .consulting-advisory-item {
+    max-width: 760px;
+  }
+  .consulting-output-layout,
+  .consulting-gcc,
+  .consulting-principles {
+    gap: 5vw;
+  }
+  .consulting-stage {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 15px 30px;
+  }
+  .consulting-stage > .consulting-prose {
+    grid-column: 2;
+  }
+  .consulting-stage h3 {
+    max-width: none;
+  }
+  .consulting-secondary-film .cinema-copy h3 {
+    font-size: 35px;
+  }
+  .consulting-service-row {
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .consulting-page [id] {
+    scroll-margin-top: 35px;
+  }
+  .consulting-section {
+    padding: 80px var(--gutter);
+  }
+  .consulting-section h2 {
+    font-size: clamp(34px, 9.3vw, 53px);
+    max-width: 20ch;
+  }
+  .consulting-section-head,
+  .consulting-point,
+  .consulting-advisory-intro,
+  .consulting-output-layout,
+  .consulting-gcc,
+  .consulting-principles,
+  .consulting-questions {
+    display: block;
+  }
+  .consulting-section-head {
+    margin-bottom: 45px;
+  }
+  .consulting-section-head > .consulting-prose {
+    margin-top: 28px;
+  }
+  .consulting-note {
+    margin-bottom: 22px;
+  }
+  .consulting-hero {
+    min-height: max(940px, 100svh);
+    padding: 160px var(--gutter) 165px;
+  }
+  .consulting-category {
+    margin: 0 0 25px;
+    text-align: left;
+  }
+  .consulting-hero h1 {
+    font-size: clamp(42px, 11.3vw, 67px);
+    line-height: 1.08;
+    text-align: left;
+    text-wrap: initial;
+  }
+  .consulting-descriptor {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 28px;
+    line-height: 1.65;
+  }
+  .consulting-hero-lower {
+    display: block;
+    margin-top: 30px;
+  }
+  .consulting-hero-lower > p {
+    font-size: 15px;
+  }
+  .consulting-hero-actions {
+    align-items: flex-start;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  .consulting-hero-bottom {
+    flex-wrap: wrap;
+    align-items: flex-end;
+    font-size: 10px;
+    gap: 20px;
+  }
+  .consulting-hero-bottom > a {
+    max-width: 155px;
+    gap: 14px;
+  }
+  .consulting-hero .motion-toggle {
+    display: none;
+  }
+  .consulting-contents {
+    position: static;
+    flex-wrap: wrap;
+    padding: 22px var(--gutter);
+    gap: 5px 22px;
+    font-size: 12px;
+  }
+  .consulting-contents a {
+    min-height: 40px;
+  }
+  .consulting-point-body {
+    margin-top: 36px;
+  }
+  .consulting-lead {
+    font-size: 22px;
+  }
+  .consulting-pull {
+    font-size: 29px;
+    margin-top: 35px;
+  }
+  .consulting-situations {
+    grid-template-columns: 1fr;
+  }
+  .consulting-situation {
+    padding-block: 28px;
+    gap: 14px;
+    grid-template-columns: 24px minmax(0, 1fr) 20px;
+  }
+  .consulting-situation h3 {
+    font-size: 26px;
+  }
+  .consulting-advisory-intro {
+    margin-bottom: 50px;
+  }
+  .consulting-advisory-intro .consulting-prose {
+    margin-top: 28px;
+  }
+  .consulting-area-nav {
+    grid-template-columns: 1fr;
+    margin-bottom: 55px;
+  }
+  .consulting-area-nav a {
+    padding-block: 15px;
+  }
+  .consulting-advisory-item {
+    margin-bottom: 65px;
+    padding-top: 26px;
+  }
+  .consulting-advisory-item h3 {
+    font-size: 35px;
+  }
+  .consulting-related > div {
+    display: block;
+  }
+  .consulting-related a {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff3;
+    min-height: 52px;
+  }
+  .consulting-film .section-video {
+    min-height: 680px;
+    height: 85svh;
+  }
+  .consulting-priority-map {
+    position: static;
+    margin-bottom: 50px;
+    padding: 22px;
+  }
+  .consulting-map-graphic {
+    height: 370px;
+  }
+  .map-branches {
+    top: 155px;
+    gap: 6px;
+  }
+  .consulting-map-graphic p {
+    font-size: 11px;
+  }
+  .consulting-output {
+    gap: 18px;
+  }
+  .consulting-output h3 {
+    font-size: 26px;
+  }
+  .consulting-stage {
+    gap: 15px 20px;
+    padding-block: 25px 36px;
+  }
+  .consulting-stage h3 {
+    font-size: 29px;
+  }
+  .consulting-stage > .consulting-prose {
+    grid-column: 2;
+  }
+  .consulting-journey > .link-button {
+    margin-left: 0;
+  }
+  .consulting-stages::before,
+  .consulting-stages::after {
+    top: 35px;
+  }
+  .consulting-gcc-copy > h2 {
+    margin-bottom: 32px;
+  }
+  .consulting-gcc-sequence {
+    position: static;
+    padding-top: 65px;
+  }
+  .consulting-gcc-sequence li {
+    font-size: 27px;
+    padding-bottom: 50px;
+  }
+  .consulting-gcc-sequence figcaption {
+    margin-bottom: 35px;
+  }
+  .consulting-service-row {
+    grid-template-columns: 24px minmax(0, 1fr) 22px;
+    gap: 16px;
+    padding-block: 25px;
+  }
+  .consulting-service-row > p {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .consulting-service-row > svg {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .consulting-service-row h3 {
+    font-size: 28px;
+  }
+  .consulting-capabilities-end {
+    display: block;
+    margin-top: 35px;
+  }
+  .consulting-capabilities-end > .link-button {
+    margin-top: 30px;
+  }
+  .consulting-secondary-film {
+    position: static;
+    margin-top: 55px;
+  }
+  .consulting-secondary-film .section-video {
+    min-height: 620px;
+    height: 78svh;
+    max-height: none;
+  }
+  .consulting-secondary-film .cinema-copy h3 {
+    font-size: 38px;
+  }
+  .consulting-principles-copy > h2 {
+    margin-bottom: 36px;
+  }
+  .consulting-questions > div:first-child {
+    margin-bottom: 40px;
+  }
+  .consulting-faq summary {
+    font-size: 19px;
+  }
+  .consulting-closing h2 {
+    font-size: clamp(40px, 10.5vw, 60px);
+  }
+  .consulting-closing .candidate-entry {
+    margin-top: 45px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .consulting-page *,
+  .consulting-page *::before,
+  .consulting-page *::after {
+    transition: none !important;
+  }
+}

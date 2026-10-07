@@ -1,0 +1,61 @@
+Arnold Consulting — media credits and provenance
+Prepared 7 October 2026. Stock subjects/buildings are illustrative, without Arnold affiliation.
+Original code, luminous shader, icons and social graphic created for this project.
+
+architecture-reflection.jpg — Ahmed Nishaath (@nihthu)
+https://unsplash.com/photos/modern-glass-buildings-reflecting-city-skyline-c4LhhC9Y0DA
+License: https://unsplash.com/license
+
+bengaluru-aerial.jpg — Aswin Karuvally (@karuvally)
+https://unsplash.com/photos/aerial-view-of-a-dense-cityscape-with-buildings-and-trees-jvvEOqMcGqw
+License: https://unsplash.com/license
+
+leadership-discussion.jpg — Vitaly Gariev
+https://unsplash.com/photos/colleagues-collaborating-at-a-modern-office-desk-0iTp1WNlMGc
+License: https://unsplash.com/license
+
+learning-session.jpg — Vitaly Gariev
+https://unsplash.com/photos/teacher-interacting-with-students-in-a-classroom-setting-c6QLJhezaYs
+License: https://unsplash.com/license
+
+team-collaboration.jpg — Vitaly Gariev
+https://unsplash.com/photos/colleagues-collaborating-in-a-modern-office-environment-pVyb2zYnl1c
+License: https://unsplash.com/license
+
+technology-infrastructure.jpg — Eric Stoynov (@ericstoynov)
+https://unsplash.com/photos/two-server-racks-filled-with-electronic-components-and-wires-k27hkqXuveo
+License: https://unsplash.com/license
+
+perspective.mp4 / perspective.jpg — cottonbro studio
+https://www.pexels.com/video/businessman-looking-through-a-glass-window-8572174/
+License: https://www.pexels.com/license/
+Muted 9.4-second 1280×676 derivative with a 0.6-second loop crossfade; source master and the original 10-second library preview stay outside the application.
+
+Manrope — Manrope Project Authors; SIL Open Font License 1.1. See /fonts/LICENSE.txt.
+Full source/licence records and checksums are retained privately in assets/library manifests.
+
+Signature refinement, 7 October 2026:
+arnold-atmosphere-still.webp / arnold-atmosphere-mobile.webp and graphics/shaders.ts — original Arnold procedural artwork, created for this project. The still uses the same field equations as the renderer at time zero; the mobile derivative preserves its centred portrait crop.
+technology-team-hands.mp4 / .jpg / -mobile.jpg — utopia 36
+https://www.pexels.com/video/close-up-of-people-working-with-computers-in-an-office-12283404/
+License: https://www.pexels.com/license/
+team-whiteboard-workshop.mp4 / .jpg / -mobile.jpg — Pavel Danilyuk
+https://www.pexels.com/video/man-writing-on-the-whiteboard-7804954/
+License: https://www.pexels.com/license/
+New clips are muted 8.4-second, 1280x720, 25fps H.264 derivatives with a 0.6-second crossfade. Smaller -mobile.webp stills accompany the JPEG fallbacks. Masters remain outside the application. Stock participants, screen content and whiteboard marks are illustrative, not Arnold staff, delivery evidence or results.
+perspective-mobile.jpg — portrait derivative of the cottonbro studio source credited above.
+Noto Sans Devanagari — The Noto Project Authors; SIL OFL 1.1, /fonts/NotoSansDevanagari-OFL.txt. A 500-weight Hindi headline WOFF2 subset preserves GSUB/GPOS shaping; source from https://github.com/google/fonts/tree/main/ofl/notosansdevanagari .
+OGL 1.0.11 — Unlicense; https://github.com/oframe/ogl . GSAP 3.15.0 — Standard No Charge License; https://gsap.com/standard-license/ . Dependency notices remain in their packages.
+
+Consulting page, 7 October 2026:
+consulting-discussion.mp4 / .jpg / -mobile.jpg / -mobile.webp — Tima Miroshnichenko
+https://www.pexels.com/video/business-people-having-a-meeting-5439031/
+consulting-perspective.mp4 / .jpg / -mobile.jpg / -mobile.webp — cottonbro studio
+https://www.pexels.com/video/businessman-looking-through-a-glass-window-8572174/
+License for both: https://www.pexels.com/license/
+Muted 8.4-second H.264 derivatives, 1280x720 and 1280x676 respectively, with a 0.6-second loop crossfade. Source ranges are 2–11 seconds and 20–29 seconds. Local research masters and provenance remain outside the application. Portrait JPEG/WebP posters preserve mobile framing. Participants and settings are illustrative; they do not represent Arnold staff, clients or engagement results.
+The priority map, GCC sequence and consulting journey are original HTML/SVG compositions created for Arnold.
+
+Client strip, 7 October 2026:
+clients/*.webp — ten original marks extracted from the user-supplied Arnold Consulting + Apex Workforce Advisory.pdf, page 14, embedded image object 228. Source-era identities are retained; extraction bounds and SHA-256 provenance are recorded outside the public app in assets/client-logos/manifest.json. No logos were generated or redrawn. CSS supplies the monochrome display. Supplied relationship evidence supports the user-authorised local review; current relationship and public trademark-use permission review remains part of release. The strip is excluded from a public-release build unless CLIENT_LOGOS_PUBLIC_APPROVED=true.
+The new role briefs, hiring-wave roadmaps, responsibility maps and learning/application examples are original HTML content. Illustrative examples contain no real candidate data or invented client results.

@@ -1,0 +1,9 @@
+node_modules/
+.next/
+.env*
+!.env.example
+output/
+coverage/
+*.tsbuildinfo
+.DS_Store
+security/csp-hashes.json

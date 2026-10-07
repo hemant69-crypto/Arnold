@@ -1,0 +1,480 @@
+@font-face {
+  font-family: "Arnold Hindi";
+  src: url("/fonts/noto-sans-devanagari-hero.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.signature-zone {
+  position: relative;
+  isolation: isolate;
+  /* Contain the sticky field's negative-margin paint at the final scene. */
+  overflow: clip;
+  background: #000;
+}
+.signature-zone .atmosphere {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  margin-bottom: -100svh;
+  z-index: -1;
+  pointer-events: none;
+  background: #000 url("/media/arnold-atmosphere-still.webp") center / cover
+    no-repeat;
+}
+.signature-zone .atmosphere canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+.signature-zone .atmosphere canvas.is-ready {
+  opacity: 1;
+}
+.signature-zone .hero {
+  position: relative;
+  min-height: max(840px, 100svh);
+  padding: 185px var(--gutter) 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+}
+.hero-message {
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+.hero-headline {
+  position: relative;
+  font-size: clamp(58px, 6.7vw, 104px);
+  text-align: center;
+}
+.signature-zone .hero h1 {
+  font-size: inherit;
+  font-weight: 450;
+  letter-spacing: -0.06em;
+  line-height: 1.08;
+  max-width: none;
+}
+.hero-headline span {
+  display: block;
+}
+.hero-hindi {
+  display: none;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font:
+    500 0.82em/1.332 "Arnold Hindi",
+    sans-serif;
+  letter-spacing: -0.025em;
+  clip-path: circle(
+    var(--lens-radius, 0px) at var(--lens-x, -300px) var(--lens-y, -300px)
+  );
+}
+.hero-headline[data-font-ready="true"][data-lens-active="true"] .hero-hindi {
+  display: block;
+}
+.hero-headline[data-lens-active="true"] h1 {
+  mask-image: radial-gradient(
+    circle at var(--lens-x) var(--lens-y),
+    transparent calc(var(--lens-radius) - 1px),
+    #000 var(--lens-radius)
+  );
+}
+.hero-headline[data-language="hi"] h1 {
+  font-family: "Arnold Hindi", sans-serif;
+  font-size: 0.78em;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+.hero-headline[data-language="hi"] .hero-hindi {
+  display: none;
+}
+.headline-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 28px;
+  font-size: 11px;
+  color: #fff;
+}
+.headline-language button {
+  min-height: 44px;
+  padding: 6px 2px;
+  background: transparent;
+  border-bottom: 1px solid #fff8;
+  font-size: 12px;
+}
+.headline-language button[disabled] {
+  opacity: 0.7;
+  cursor: default;
+}
+.headline-language button span {
+  display: inline;
+}
+.headline-language [lang="hi"] {
+  font-family: "Arnold Hindi", sans-serif;
+}
+.lens-hint {
+  opacity: 0.8;
+}
+.signature-zone .hero-lower {
+  margin-top: 55px;
+  gap: 45px;
+  align-items: center;
+}
+.signature-zone .hero-lower p {
+  max-width: 430px;
+  font-size: 15px;
+  line-height: 1.75;
+}
+.signature-zone .hero-actions {
+  gap: 25px;
+}
+.signature-zone .hero-bottom {
+  font-size: 11px;
+  line-height: 1.6;
+  bottom: 30px;
+  align-items: end;
+}
+.signature-zone .motion-toggle {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 85px;
+  display: flex;
+  border: 1px solid #fff7;
+  border-radius: 30px;
+  background: #0004;
+  min-height: 44px;
+  padding: 9px 16px;
+  gap: 20px;
+  align-items: center;
+  font-size: 11px;
+}
+.signature-context {
+  padding-top: 145px;
+  padding-bottom: 110px;
+  background: #0004;
+}
+.signature-context h2 {
+  max-width: 900px;
+}
+.signature-context .context-copy {
+  color: #f1f2f6;
+}
+.signature-capabilities {
+  padding-top: 70px;
+  padding-bottom: 160px;
+}
+.signature-capabilities .capability-head {
+  margin-bottom: 110px;
+}
+.signature-capabilities .capability-head h2 {
+  font-size: clamp(40px, 4.7vw, 68px);
+}
+.capability-scenes {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+.capability-scenes .capability-scene {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 7vw;
+  padding: 0;
+  margin: 0;
+}
+.capability-scene figure {
+  aspect-ratio: 6/5;
+  margin: 0;
+}
+.capability-scene figure img {
+  animation: none;
+  transition: none;
+  filter: saturate(0.7);
+}
+.capability-scene:hover figure img {
+  transform: none;
+}
+.capability-scene .family-body {
+  padding-block: 24px;
+}
+.capability-scenes .family h3 {
+  font-size: clamp(36px, 4.3vw, 62px);
+  line-height: 1.08;
+  margin: 0 0 28px;
+}
+.capability-scenes .family p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.capability-scenes .family .scene-index {
+  font-size: 11px;
+  margin-bottom: 28px;
+}
+.capability-scene .family-links {
+  margin-top: 35px;
+}
+.capability-scene .family-links a {
+  border-color: #ffffff70;
+  min-height: 54px;
+  font-size: 13px;
+}
+.capability-scene:nth-child(2) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr);
+}
+.capability-scene:nth-child(2) figure {
+  order: 2;
+}
+.capability-scene:nth-child(2) .family-body {
+  order: 1;
+}
+.menu .menu-panel {
+  inset: 0 0 auto;
+  width: 100%;
+  min-height: 0;
+  max-height: 100dvh;
+  overflow: auto;
+  padding: 108px var(--gutter) 28px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.1fr;
+  gap: 30px 5vw;
+  background: #fff;
+  color: #000;
+}
+.menu[open] .menu-panel {
+  animation: none;
+}
+.menu .menu-intro {
+  font-size: clamp(24px, 2.8vw, 40px);
+  line-height: 1.15;
+  margin: 0;
+  max-width: 260px;
+  letter-spacing: -0.045em;
+}
+.menu .expanded-nav {
+  font-size: clamp(20px, 1.8vw, 28px);
+  gap: 25px;
+}
+.menu .expanded-nav a {
+  padding-block: 5px;
+  min-height: 44px;
+}
+.menu .menu-services {
+  grid-template-columns: 1fr;
+  margin: 0;
+  gap: 2px;
+  align-content: start;
+  font-size: 13px;
+}
+.menu .menu-services a {
+  min-height: 36px;
+}
+.menu .menu-bottom {
+  grid-column: 1 / -1;
+  border-top: 1px solid #d6d8dc;
+  margin: 0;
+  padding-top: 22px;
+  font-size: 11px;
+}
+.section-video {
+  min-height: 600px;
+  height: 78svh;
+  max-height: 900px;
+}
+.section-video.is-cinematic {
+  min-height: 680px;
+  height: 90svh;
+  max-height: 1050px;
+}
+.section-video picture {
+  position: absolute;
+  inset: 0;
+}
+.section-video picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.section-video video {
+  position: absolute;
+  inset: 0;
+}
+.section-video .cinema-shade {
+  background: linear-gradient(0deg, #000e 0%, #0008 55%, #0003 100%);
+}
+.section-video .cinema-copy {
+  bottom: 125px;
+  max-width: 900px;
+}
+.section-video .cinema-copy h2 {
+  font-size: clamp(42px, 6vw, 86px);
+  max-width: 850px;
+}
+.section-video .section-video-summary {
+  margin: 28px 0 0;
+  max-width: 530px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+@media (max-width: 1023px) {
+  .capability-scenes {
+    gap: 95px;
+  }
+  .capability-scenes .capability-scene,
+  .capability-scene:nth-child(2) {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 35px;
+  }
+  .capability-scene:nth-child(2) figure {
+    order: 0;
+  }
+  .capability-scene:nth-child(2) .family-body {
+    order: 0;
+  }
+  .capability-scenes .family h3 {
+    font-size: 36px;
+  }
+  .menu .menu-panel {
+    grid-template-columns: 1fr 1.2fr;
+  }
+  .menu .menu-intro {
+    grid-column: 1 / -1;
+    font-size: 24px;
+    max-width: none;
+  }
+  .menu .menu-intro br {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .signature-zone .atmosphere {
+    background-image: url("/media/arnold-atmosphere-mobile.webp");
+  }
+  .signature-zone .hero {
+    min-height: max(790px, 100svh);
+    padding: 165px var(--gutter) 145px;
+  }
+  .hero-headline {
+    text-align: left;
+    font-size: clamp(34px, 10.4vw, 60px);
+  }
+  .headline-language {
+    justify-content: flex-start;
+    margin-top: 22px;
+    gap: 0;
+  }
+  .lens-hint {
+    display: none;
+  }
+  .signature-zone .hero-lower {
+    display: block;
+    margin-top: 35px;
+  }
+  .signature-zone .hero-lower p {
+    font-size: 14px;
+  }
+  .signature-zone .hero-actions {
+    align-items: flex-start;
+    margin-top: 26px;
+    gap: 10px;
+  }
+  .signature-zone .hero-bottom {
+    font-size: 10px;
+    gap: 25px;
+  }
+  .signature-zone .motion-toggle {
+    display: none;
+  }
+  .signature-context {
+    padding-block: 90px;
+  }
+  .signature-context .context-copy {
+    font-size: 15px;
+  }
+  .signature-capabilities {
+    padding-top: 25px;
+    padding-bottom: 95px;
+  }
+  .signature-capabilities .capability-head {
+    margin-bottom: 55px;
+  }
+  .signature-capabilities .capability-head h2 {
+    font-size: 39px;
+  }
+  .capability-scenes {
+    gap: 70px;
+  }
+  .capability-scenes .capability-scene {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+  .capability-scenes .family .family-body {
+    padding: 0;
+  }
+  .capability-scene figure {
+    aspect-ratio: 5/4;
+  }
+  .capability-scenes .family h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .capability-scenes .family .scene-index {
+    margin-bottom: 14px;
+  }
+  .capability-scene .family-links {
+    margin-top: 25px;
+  }
+  .menu .menu-panel {
+    grid-template-columns: 1fr;
+    padding: 95px var(--gutter) 26px;
+    gap: 28px;
+  }
+  .menu .expanded-nav {
+    font-size: 24px;
+    gap: 20px;
+  }
+  .menu .menu-services {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 20px;
+    font-size: 12px;
+  }
+  .menu .menu-bottom {
+    font-size: 10px;
+  }
+  .section-video,
+  .section-video.is-cinematic {
+    height: 75svh;
+    min-height: 620px;
+  }
+  .section-video .cinema-copy {
+    bottom: 140px;
+  }
+  .section-video .cinema-copy h2 {
+    font-size: clamp(38px, 10vw, 58px);
+  }
+  .section-video .section-video-summary {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signature-zone .motion-toggle,
+  .lens-hint {
+    display: none;
+  }
+  .hero-headline h1 {
+    mask-image: none !important;
+  }
+  .hero-hindi {
+    display: none !important;
+  }
+}
