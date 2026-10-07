@@ -14,7 +14,7 @@ const contents = [
   ["Advisory areas", "advisory-areas"],
   ["What you receive", "practical-outputs"],
   ["How we work", "working-together"],
-  ["GCC & Technology", "gcc-and-technology"],
+  ["GCC & Enterprise Capability", "gcc-and-technology"],
   ["Questions", "consulting-questions"],
 ];
 const situationTargets = [
@@ -80,7 +80,7 @@ export function Consulting({
           aria-labelledby="consulting-title"
           data-motion-scene="0"
         >
-          <p className="consulting-category">Business consulting</p>
+          <p className="consulting-category">Business Consulting</p>
           <h1 id="consulting-title">{page.title}</h1>
           <p className="consulting-descriptor">{page.summary}</p>
           <div className="consulting-hero-lower">
@@ -392,7 +392,9 @@ export function Consulting({
         aria-labelledby="gcc-title"
       >
         <div className="consulting-gcc-copy">
-          <p className="consulting-note">Business context: GCC & Technology</p>
+          <p className="consulting-note">
+            Business context: GCC & Enterprise Capability
+          </p>
           <h2 id="gcc-title" data-consult-reveal>
             {gcc.title}
           </h2>
@@ -400,7 +402,7 @@ export function Consulting({
             <Paragraphs section={gcc} />
           </div>
           {paths.includes("/gcc") && (
-            <LinkButton href="/gcc">Explore GCC & Technology</LinkButton>
+            <LinkButton href="/gcc">Build your GCC team</LinkButton>
           )}
         </div>
         <figure className="consulting-gcc-sequence">
@@ -510,7 +512,7 @@ export function Consulting({
           aria-labelledby="perspectives-title"
         >
           <div className="consulting-section-head">
-            <p className="consulting-note">Perspectives</p>
+            <p className="consulting-note">Arnold Insights</p>
             <h2 id="perspectives-title" data-consult-reveal>
               {perspectives.title}
             </h2>

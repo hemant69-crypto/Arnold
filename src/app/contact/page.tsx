@@ -3,8 +3,8 @@ import { Contact } from "@/components/SitePages";
 import { inquiryEnabled } from "@/lib/site-config";
 import { pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata(
-  "Discuss your business needs",
-  "Start a conversation about leadership, specialist talent, recruitment capacity or people capability.",
+  "Discuss a business priority",
+  "Discuss business consulting for your next stage, or a defined leadership, talent, GCC or workforce requirement.",
   "/contact",
 );
 export const dynamic = "force-dynamic";

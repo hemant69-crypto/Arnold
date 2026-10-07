@@ -4,10 +4,10 @@ const baseServices: Service[] = [
   {
     slug: "permanent-staffing",
     name: "Permanent Staffing",
-    headline: "Specialist talent for work that matters.",
+    headline: "Find the critical talent that moves the business forward.",
     summary:
       "Hire for the contribution the business needs. Define the role, understand the specialist capability required and give selection a clear basis.",
-    cta: "Discuss a hiring requirement",
+    cta: "Find critical talent",
     image: "technology-infrastructure.jpg",
     imageAlt: "Illustrative technology infrastructure",
     sections: [
@@ -78,10 +78,10 @@ const baseServices: Service[] = [
     slug: "executive-search",
     name: "Executive Search",
     variant: "executive",
-    headline: "Leadership for the business you are becoming.",
+    headline: "Build the leadership required for what comes next.",
     summary:
       "A critical appointment begins with a clear mandate. Align the business context, leadership outcomes and decision makers before approaching the market.",
-    cta: "Discuss a leadership mandate",
+    cta: "Build your leadership team",
     image: "leadership-discussion.jpg",
     imageAlt: "An illustrative leadership discussion around a meeting table",
     sections: [
@@ -115,6 +115,19 @@ const baseServices: Service[] = [
           "Agree the search scope and market approach before outreach begins. The engagement should set out the responsibilities for identifying potential candidates, considering relevant experience, coordinating discussions and maintaining communication. Any assessment or checking method must be explicitly agreed.",
           "At each review, compare candidates with the mandate rather than with whichever profile arrived most recently. Interview feedback is most useful when it identifies evidence, unanswered questions and the next decision. A consistent framework helps stakeholders distinguish a compelling presentation from a strong fit for the work.",
           "The client retains the appointment decision. A clear interview sequence and an identified decision owner can prevent a carefully developed shortlist from stalling while priorities change.",
+        ],
+      },
+      {
+        id: "leadership-priorities",
+        title: "Executive search, CXO roles and the next leadership decision.",
+        paragraphs: [
+          "Connect executive and CXO search with the responsibilities the business needs to place in capable hands. Succession priorities, leadership transitions and local leadership for a GCC can each shape the mandate and the relevant talent market.",
+          "Leadership advisory, succession planning, formal leadership assessment and leadership development involve different activities. If your requirement extends beyond search, agree the specialist expertise, methods and deliverables before including those activities in an engagement.",
+        ],
+        bullets: [
+          "Executive & CXO Search: Define the business mandate, authority and contribution required.",
+          "Succession & transitions: Clarify continuity, the timing of appointments and the readiness questions to address.",
+          "Assessment & development: Confirm an appropriate method, qualified delivery and scope for any work beyond recruitment.",
         ],
       },
       {
@@ -158,10 +171,10 @@ const baseServices: Service[] = [
     slug: "recruitment-process-outsourcing",
     name: "Recruitment Process Outsourcing",
     variant: "rpo",
-    headline: "Recruitment capacity, organised around your business.",
+    headline: "Recruitment capacity built around your growth.",
     summary:
-      "When hiring becomes a programme, connect recruitment capacity to demand. Agree the activities, decision ownership and review rhythm around your internal team.",
-    cta: "Scope recruitment capacity",
+      "From dedicated recruitment teams to enterprise RPO, shape recruitment capacity around your growth. Agree a model designed to improve speed, quality, governance and candidate experience.",
+    cta: "Scale your hiring",
     sections: [
       {
         id: "demand",
@@ -198,6 +211,36 @@ const baseServices: Service[] = [
               "Transition",
               "Closure and handover agreed at the start",
               "Review and transition arrangements agreed for the programme",
+            ],
+          ],
+        },
+      },
+      {
+        id: "rpo-models",
+        title: "Enterprise, project or modular: choose the capacity you need.",
+        paragraphs: [
+          "Start with the hiring demand and the work your internal team will retain. The appropriate configuration, recruiter capacity and delivery readiness are confirmed against that requirement; a larger label does not automatically mean a better fit.",
+          "Recruitment consulting, talent intelligence and recruitment analytics can support role calibration, pipeline decisions and programme review. Agree the information sources, reporting definitions and accountable owners for the actual scope.",
+        ],
+        table: {
+          caption: "RPO configurations to scope around demand",
+          headings: ["Configuration", "Starting requirement"],
+          rows: [
+            [
+              "Enterprise RPO",
+              "A continuing recruitment programme with agreed functions, governance and integration with the internal team.",
+            ],
+            [
+              "Project RPO",
+              "A bounded hiring wave, team build or expansion with a defined handover.",
+            ],
+            [
+              "Modular RPO",
+              "Selected recruitment activities or capacity alongside the client’s retained process.",
+            ],
+            [
+              "Build-Operate-Transfer",
+              "A recruitment capability with mobilisation, operating responsibilities and a planned transfer, subject to a separately confirmed scope.",
             ],
           ],
         },
@@ -352,9 +395,9 @@ const baseServices: Service[] = [
   {
     slug: "temporary-staffing",
     name: "Temporary Staffing",
-    headline: "The capacity you need. For the work in view.",
+    headline: "Flexible workforce capacity around changing demand.",
     summary:
-      "Plan time-bound workforce capacity around the role, duration and working environment. Confirm employment, supervision and transition responsibilities before deployment.",
+      "Contract, temporary and contract-to-hire models connect capacity with the work in view. Agree the duration, employment responsibilities, supervision and any transition before deployment.",
     cta: "Discuss workforce capacity",
     variant: "temporary",
     sections: [
@@ -402,6 +445,14 @@ const baseServices: Service[] = [
         },
       },
       {
+        id: "contract-to-hire",
+        title: "Contract-to-hire: make the possible transition clear.",
+        paragraphs: [
+          "A contract-to-hire arrangement can give the business and the individual time to evaluate the working fit before a possible permanent appointment. It should begin with a real role, clear employment terms and an honest explanation of the potential next step.",
+          "Agree the assignment period, review criteria, conversion decision, commercial terms and responsibilities in advance. Conversion is a separate decision, not a guaranteed outcome. A continuing requirement can also start directly through Permanent Staffing.",
+        ],
+      },
+      {
         id: "deployment",
         title: "Prepare the start as carefully as the search.",
         paragraphs: [
@@ -442,10 +493,10 @@ const baseServices: Service[] = [
   },
   {
     slug: "training",
-    name: "Training",
-    headline: "Learning with a clear purpose in the work.",
+    name: "Capability Building",
+    headline: "Build what you cannot simply hire.",
     summary:
-      "Give learning a practical purpose. Identify what people need to do differently, define the audience and shape an engagement around that capability need.",
+      "Connect learning, upskilling and reskilling with the work people need to do next. Define the audience, capability gap and practical application before shaping a programme.",
     cta: "Discuss capability needs",
     image: "learning-session.jpg",
     imageAlt: "Illustrative group learning session",
@@ -458,6 +509,19 @@ const baseServices: Service[] = [
           "A request for training often begins with a subject. A useful brief goes further: who needs to learn, what the work requires and what participants should be able to do afterwards.",
           "Describe the situations in which the capability matters. Identify whether the audience is new to the work, building on existing experience or adapting to a changed responsibility. A mixed audience may need different starting points rather than the same session for everyone.",
           "Training is one possible response to a capability gap. If the issue is unclear responsibility, missing resources or a process that prevents people from applying a skill, those factors need to be considered alongside the learning requirement.",
+        ],
+      },
+      {
+        id: "future-capability",
+        title: "Learning, leadership and readiness for changing work.",
+        paragraphs: [
+          "Upskilling deepens capability for a changing role. Reskilling prepares people for a different contribution. Manager capability, leadership development and AI readiness each need a specific audience and an observable purpose in the work.",
+          "For AI readiness, begin with the tasks that are changing, the judgement people need to retain and the organisation’s approved use of technology. Confirm programme content, subject expertise and delivery scope for the actual requirement rather than assume a ready-made AI or leadership curriculum.",
+        ],
+        bullets: [
+          "Upskilling & reskilling: Identify current experience, the future contribution and an appropriate learning path.",
+          "Manager & leadership capability: Define the decisions, team responsibilities or behaviours to develop.",
+          "AI readiness & workforce capability: Connect changing tasks with relevant skills, safe working practices and practical application.",
         ],
       },
       {

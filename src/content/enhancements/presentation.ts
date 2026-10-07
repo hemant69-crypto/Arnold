@@ -51,22 +51,25 @@ const service = (label: string, slug: string) =>
   resource(label, `/capabilities/${slug}`);
 export const sectionResources: Record<string, Resource[]> = {
   cap1: [
+    resource("Business Consulting", "/consulting"),
     service("Permanent Staffing", "permanent-staffing"),
     service("Executive Search", "executive-search"),
     service("RPO", "recruitment-process-outsourcing"),
     service("Temporary Staffing", "temporary-staffing"),
     service("HR Solutions", "hr-solutions"),
-    service("Training", "training"),
+    service("Capability Building", "training"),
   ],
   cap3: [
-    resource("Business consulting", "/consulting"),
-    resource("GCC & Technology", "/gcc"),
+    resource("Business Consulting", "/consulting"),
+    resource("GCC & Enterprise Capability", "/gcc"),
+    service("Leadership search", "executive-search"),
+    service("Recruitment capacity", "recruitment-process-outsourcing"),
     resource("Prepare a business conversation", "/employers"),
   ],
   exp2: [
     resource("Technology talent", "/expertise/technology"),
     resource("Business functions", "/expertise/business-functions"),
-    resource("GCC & Technology", "/gcc"),
+    resource("GCC & Enterprise Capability", "/gcc"),
   ],
   exp3: [
     service("Specialist hiring", "permanent-staffing"),
@@ -136,8 +139,8 @@ export const sectionResources: Record<string, Resource[]> = {
     ),
   ],
   hr3: [
-    resource("Business consulting", "/consulting"),
-    service("Training", "training"),
+    resource("Business Consulting", "/consulting"),
+    service("Capability Building", "training"),
     service("RPO", "recruitment-process-outsourcing"),
   ],
   temp3: [
@@ -155,7 +158,7 @@ export const sectionResources: Record<string, Resource[]> = {
     ),
   ],
   gcc3: [
-    resource("Business consulting", "/consulting"),
+    resource("Business Consulting", "/consulting"),
     resource("Technology talent", "/expertise/technology"),
   ],
   emp1: [resource("Compare all capabilities", "/capabilities#cap2")],
@@ -173,13 +176,13 @@ export const sectionResources: Record<string, Resource[]> = {
   ],
   about2: [
     resource("How we work together", "/approach"),
-    resource("Business consulting", "/consulting"),
+    resource("Business Consulting", "/consulting"),
   ],
   tech3: [
     service("Permanent Staffing", "permanent-staffing"),
     service("Executive Search", "executive-search"),
     service("RPO", "recruitment-process-outsourcing"),
-    resource("GCC & Technology", "/gcc"),
+    resource("GCC & Enterprise Capability", "/gcc"),
   ],
   func3: [
     resource("Our approach", "/approach"),
@@ -194,7 +197,7 @@ export const sectionResources: Record<string, Resource[]> = {
     resource("Compare the six services", "/capabilities"),
   ],
   agcc3: [
-    resource("GCC & Technology", "/gcc"),
+    resource("GCC & Enterprise Capability", "/gcc"),
     resource("For employers", "/employers"),
   ],
   arpo3: [

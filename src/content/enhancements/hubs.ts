@@ -6,16 +6,17 @@ export const hubEnhancements: Record<string, Section[]> = {
       id: "cap1",
       title: "Start with the business situation.",
       paragraphs: [
-        "The same hiring pressure can point to different needs. Start with the work the business must make possible, then choose the support around it. A missing specialist, an unfilled leadership responsibility and a recruitment programme under strain are different starting points.",
+        "Business consulting connects the objective with the decisions behind it. Start with growth, a new mandate or a capability gap, then identify the leadership, skills and workforce model that can support the next stage.",
         "You do not need a finished service brief to recognise the situation. Use the routes below to explore what should be clarified and bring the business context to the first conversation.",
       ],
       bullets: [
+        "A business direction to clarify — Define the growth priority, people implications and practical roadmap through business consulting.",
         "A critical leader — Clarify the decisions, authority and contribution behind an Executive Search mandate.",
         "A scarce specialist — Define the role and relevant experience for a Permanent Staffing discussion.",
         "Sustained recruitment demand — Examine approved requirements, internal capacity and ownership before choosing RPO.",
         "Defined-duration capacity — Establish the work, period and responsibilities for Temporary Staffing.",
         "A specific people issue — Frame the question and intended next decision for a scoped HR Solutions discussion.",
-        "A learning need — Describe the audience, work situation and observable objective before shaping Training.",
+        "A learning need — Describe the audience, work situation and observable objective before shaping capability building.",
       ],
     },
     {
@@ -58,7 +59,7 @@ export const hubEnhancements: Record<string, Section[]> = {
             "Establish the issue, scope and useful next decision; identify the sponsor and required specialist involvement.",
           ],
           [
-            "Training",
+            "Capability Building",
             "A defined audience with a specific learning need.",
             "Agree objective, available delivery scope and review; the client supplies context and application support.",
           ],
@@ -67,13 +68,14 @@ export const hubEnhancements: Record<string, Section[]> = {
     },
     {
       id: "cap3",
-      title: "When capabilities work together.",
+      title: "Three business priorities. Connected responses.",
       paragraphs: [
-        "A business requirement can connect several services without turning them into one undifferentiated package. Establish the business decision first, then make the dependencies and responsibilities visible. The examples below illustrate a sequence to discuss, rather than completed client engagements.",
+        "Start with consulting to clarify the decision, then connect the delivery around it. These illustrative situations show how the capabilities work together; they are discussion examples, not claims about completed client results.",
       ],
       bullets: [
-        "A growing technology function — The sponsor defines the mandate; a leadership search may establish direction; Permanent Staffing supports calibrated specialist roles. If the hiring wave needs coordinated capacity, RPO becomes a separate scope discussion.",
-        "An established team with a people issue — Clarify whether the difficulty concerns an unclear role, a missing capability or a learning need. That decision can lead to hiring, a scoped people engagement or Training, with the relevant owner involved.",
+        "Scale a GCC team — Clarify the centre's business mandate, leadership responsibilities and critical skills. Build a hiring-wave roadmap, then connect Executive Search, specialist Permanent Staffing and RPO with the next milestone.",
+        "Appoint a critical leader — Align the business priorities, authority and expected contribution. Translate that decision into a calibrated leadership mandate and an Executive Search, with clear stakeholder responsibilities.",
+        "Build recruitment capacity for growth — Map approved demand, internal capacity and decision bottlenecks. Choose project, modular or enterprise RPO, then review pipeline progress and candidate experience against agreed measures.",
       ],
     },
   ],
@@ -137,14 +139,16 @@ export const hubEnhancements: Record<string, Section[]> = {
   "/insights": [
     {
       id: "ins1",
-      title: "Choose the question in front of you.",
+      title: "Five perspectives on workforce capability.",
       paragraphs: [
-        "Start with a decision you need to make. Each perspective offers a practical way to frame it, with an illustrative working example and questions you can bring to your own planning discussion.",
+        "Arnold Insights connects forward-looking questions with practical decisions. Explore original perspectives across five editorial pillars, with skills running through the whole workforce agenda. Articles are available to read without a subscription.",
       ],
       bullets: [
-        "Planning a GCC team — Connect the business mandate with leadership dependencies, specialist roles and selection capacity.",
-        "Choosing recruitment capacity — Distinguish a bounded hiring project from an ongoing programme and make responsibilities explicit.",
-        "Aligning a senior appointment — Translate the leadership task into criteria, stakeholder questions and a shared decision process.",
+        "Leadership — Executive and AI-era leadership, CEO and CHRO priorities, succession, transitions and the mandate behind a critical appointment.",
+        "Workforce — Workforce transformation, productivity, skills, workforce planning, internal mobility and the organisation of work.",
+        "AI & Work — Changing jobs, human-AI collaboration, AI readiness, future skills and the people implications of AI in recruitment.",
+        "GCC — India capability, GCC leadership, scaling, technology and AI talent, and the workforce behind an evolving centre.",
+        "Talent & Skills — Critical skills, talent intelligence, executive hiring, build-versus-buy decisions, salary context and candidate behaviour.",
       ],
     },
     {
@@ -169,6 +173,14 @@ export const hubEnhancements: Record<string, Section[]> = {
             "Leadership mandate and interview map",
             "Give each criterion a reason and each interviewer a useful evidence question.",
           ],
+          [
+            "AI-workforce questions",
+            "Connect changing tasks with leadership accountability, relevant skills and learning application.",
+          ],
+          [
+            "Critical-skills decision guide",
+            "Compare internal mobility, development, specialist hiring and recruitment capacity against the work required.",
+          ],
         ],
       },
     },
@@ -176,7 +188,7 @@ export const hubEnhancements: Record<string, Section[]> = {
       id: "ins3",
       title: "From a useful question to the right conversation.",
       paragraphs: [
-        "If the question concerns a centre’s hiring sequence, explore GCC & Technology. If it concerns the recruitment operating model, start with RPO. For a business-critical appointment, use the Executive Search mandate as the reference.",
+        "If the question concerns a centre’s hiring sequence, explore GCC & Enterprise Capability. If it concerns the recruitment operating model, start with RPO. For a business-critical appointment, use the Executive Search mandate as the reference.",
         "These are original general perspectives and illustrative planning aids, rather than client case studies or advice tailored to a particular organisation. Bring your actual context to a scoped business conversation. Arnold’s LinkedIn company page provides a separate route to professional updates.",
       ],
     },
@@ -184,20 +196,21 @@ export const hubEnhancements: Record<string, Section[]> = {
   "/opportunities": [
     {
       id: "opp1",
-      title: "Explore the work behind the role.",
+      title: "Find your next opportunity. Understand the work behind it.",
       paragraphs: [
         "Look beyond the job title to the work, responsibility and environment the opportunity involves. Arnold’s hiring contexts include technology talent, leadership and selected business functions. Those areas help explain a requirement; they are not a list of currently open vacancies.",
         "Use the actual vacancy to check location, working arrangements, essential experience and the application route. The verified portal, when connected, supplies the current role information and its instructions.",
       ],
       bullets: [
-        "Technology — Consider the technical environment and the contribution expected, alongside the tools mentioned.",
+        "Technology & AI — Consider the technical environment, the contribution expected and the skills you can demonstrate, alongside the tools mentioned.",
         "Leadership — Understand the mandate, authority and stakeholders behind the title.",
         "Business functions — Review the customer, process or operational responsibility the role will hold.",
+        "AI & Future Skills — Look at the tasks changing in your field. Build relevant skills, practise evaluating outputs and explain how your judgement adds value.",
       ],
     },
     {
       id: "opp2",
-      title: "Understand the steps in a hiring conversation.",
+      title: "Career advice and interview preparation.",
       paragraphs: [
         "The process depends on the vacancy and the hiring organisation. The sequence below describes common discussion points so you can prepare; it does not guarantee progression, a response to every application or a particular timescale.",
       ],
@@ -207,6 +220,9 @@ export const hubEnhancements: Record<string, Section[]> = {
         "Discuss relevant experience — A recruiter conversation, where applicable, can clarify contribution, expectations and practical alignment.",
         "Take part in client selection — The hiring organisation determines its interviews and selection decisions. Follow the instructions for that process.",
         "Clarify an offer and joining — If selected, review the employer’s actual terms and joining information through the authorised contacts.",
+        "Prepare your CV — Connect your experience with the work, explain your contribution accurately and use relevant examples. Submit it only through the verified application route when available.",
+        "Prepare for interviews — Choose examples that show the problem, your actions and the result. Be clear about your own contribution and the decisions you would approach differently.",
+        "Research the employer — Understand the business, the team’s responsibilities and the questions you need answered about the role. Client logos are not a list of current vacancies.",
       ],
     },
     {
@@ -220,6 +236,7 @@ export const hubEnhancements: Record<string, Section[]> = {
         "How do I check fit? — Read the current role’s work, location and essential requirements before applying.",
         "Is a LinkedIn post still current? — Check its date and current application instructions. A visible post does not establish that the role remains open.",
         "What confirms an application? — Follow the portal’s process and check its actual confirmation. Opening a page or submitting an employer enquiry does not apply for a job.",
+        "How should I discuss salary? — Compare responsibilities, location, experience and the full package. Use dated, relevant evidence and clarify the employer’s actual range; no verified salary benchmark is published here.",
       ],
     },
   ],

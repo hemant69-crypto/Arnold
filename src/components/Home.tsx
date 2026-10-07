@@ -7,49 +7,32 @@ import { Arrow, LinkButton } from "./LinkButton";
 import { Conversation } from "./Footer";
 import type { Article } from "@/content/types";
 import { ClientStrip } from "./ClientStrip";
-export const familyData = [
-  {
-    title: "Talent acquisition",
-    image: "leadership-discussion.jpg",
-    alt: "Illustrative discussion between business leaders",
-    copy: "Find the specialists who move the work forward. Appoint the leaders who give it direction.",
-    links: [
-      ["Permanent Staffing", "permanent-staffing"],
-      ["Executive Search", "executive-search"],
-    ],
-  },
-  {
-    title: "Workforce delivery",
-    image: "team-collaboration.jpg",
-    alt: "Illustrative team collaborating at a shared worktable",
-    copy: "Bring recruitment capacity and time-bound talent into step with demand, with clear ownership throughout.",
-    links: [
-      ["Recruitment Process Outsourcing", "recruitment-process-outsourcing"],
-      ["Temporary Staffing", "temporary-staffing"],
-    ],
-  },
-  {
-    title: "People capability",
-    image: "learning-session.jpg",
-    alt: "Illustrative learning and discussion session",
-    copy: "Turn a people question or learning need into a focused engagement, with a clear audience and purpose.",
-    links: [
-      ["HR Solutions", "hr-solutions"],
-      ["Training", "training"],
-    ],
-  },
-];
+import {
+  capabilityThemes,
+  homeWorkforceSections,
+  workforceFramework,
+} from "@/content/workforce";
+import { ContentChapters } from "./ContentChapter";
+export const familyData = capabilityThemes;
 export function Families({
   available,
+  paths,
   scenes = false,
 }: {
   available: string[];
+  paths: string[];
   scenes?: boolean;
 }) {
+  const canLink = (href: string) => {
+    const path = href.split("#")[0];
+    return path.startsWith("/capabilities/")
+      ? available.includes(path.split("/")[2])
+      : paths.includes(path);
+  };
   return (
     <div className={scenes ? "capability-scenes" : "families"}>
       {familyData
-        .filter((f) => f.links.some(([, slug]) => available.includes(slug)))
+        .filter((f) => f.links.some(([, href]) => canLink(href)))
         .map((f, index) => (
           <article
             className={scenes ? "family capability-scene" : "family"}
@@ -78,9 +61,9 @@ export function Families({
               <p>{f.copy}</p>
               <div className="family-links">
                 {f.links
-                  .filter(([, slug]) => available.includes(slug))
-                  .map(([label, slug]) => (
-                    <Link href={`/capabilities/${slug}`} key={slug}>
+                  .filter(([, href]) => canLink(href))
+                  .map(([label, href]) => (
+                    <Link href={href} key={href}>
                       {label}
                       <Arrow diagonal />
                     </Link>
@@ -143,55 +126,51 @@ export function Home({
           <HeroHeadline />
           <div className="hero-lower">
             <p>
-              Connect your next business priority with the leadership,
-              specialist talent and people capability to move it forward.
+              Business consulting for your next stage of growth. We help
+              organizations build the leadership, talent, skills and workforce
+              capability required to turn business priorities into results.
             </p>
             <div className="hero-actions">
-              <LinkButton href="/contact">
-                Discuss your business needs
+              <LinkButton href="/contact?interest=consulting">
+                Discuss a business priority
               </LinkButton>
-              <LinkButton
-                href={
-                  paths.includes("/consulting")
-                    ? "/consulting"
-                    : "/capabilities"
-                }
-                quiet
-              >
-                {paths.includes("/consulting")
-                  ? "Explore consulting"
-                  : "Explore capabilities"}
+              <LinkButton href="/consulting" quiet>
+                Explore business consulting
               </LinkButton>
             </div>
           </div>
           <div className="hero-bottom">
             <span>
-              Rooted in India.
+              Around 15 years of
               <br />
-              Working with the USA.
+              market experience.
             </span>
             <a href="#perspective">Scroll to explore ↓</a>
           </div>
           <MotionControl />
         </section>
         <section className="section context signature-context" id="perspective">
-          <p className="section-label">The business comes first</p>
+          <p className="section-label">
+            Business consulting, connected to delivery
+          </p>
           <div>
             <h2>
-              New direction.
+              Your next business chapter.
               <br />
-              New demands on your people.
+              The decisions behind it.
             </h2>
             <div className="context-copy">
               <p>
-                A growing team. A critical appointment. A hiring programme that
-                needs more capacity. Each starts with a different business
-                question.
+                Growth, a new GCC mandate or changing technology can reshape
+                what your business needs from its people. Which leaders will
+                take it forward? What skills will matter? How should capacity
+                grow with demand?
               </p>
               <p>
-                We help connect that question to the right talent, workforce or
-                people engagement, with the priorities and responsibilities
-                clear from the start.
+                We start with those business questions. Clarify priorities,
+                compare the routes available and build a practical plan. Then
+                connect the advice with leadership search, talent, workforce
+                models, capability building and GCC teams.
               </p>
             </div>
           </div>
@@ -200,18 +179,18 @@ export function Home({
         <section className="section signature-capabilities">
           <div className="capability-head">
             <div>
-              <p className="section-label">Connected capabilities</p>
+              <p className="section-label">From consulting to execution</p>
               <h2>
-                Different challenges.
+                From business priority
                 <br />
-                Connected capabilities.
+                to people capability.
               </h2>
             </div>
             <LinkButton href="/capabilities" quiet>
               Find your starting point
             </LinkButton>
           </div>
-          <Families available={available} scenes />
+          <Families available={available} paths={paths} scenes />
         </section>
       </SignatureExperience>
       {paths.includes("/gcc") && (
@@ -235,17 +214,16 @@ export function Home({
             </figcaption>
           </figure>
           <div className="gcc-feature-copy">
-            <p className="section-label">GCC & Technology</p>
+            <p className="section-label">GCC & Enterprise Capability</p>
             <h2 id="gcc-feature-heading">
-              Your next stage.
+              Global capability.
               <br />
-              The right people.
+              Built around people.
             </h2>
             <p className="gcc-summary">
-              Whether you are appointing a centre leader or growing a technology
-              team, make the people plan follow the work ahead. Connect your
-              next business milestone with the talent and hiring support it
-              needs.
+              Build, scale and transform global capability from India. Connect
+              GCC leadership, product and engineering, technology and AI talent
+              with the workforce plan behind your next business milestone.
             </p>
             <ul className="gcc-support">
               {gccSupport
@@ -262,41 +240,27 @@ export function Home({
                   </li>
                 ))}
             </ul>
-            <LinkButton href="/gcc">Explore GCC & Technology</LinkButton>
+            <LinkButton href="/gcc">Build your GCC team</LinkButton>
           </div>
         </section>
       )}
       <Cinema />
+      <ContentChapters sections={homeWorkforceSections.slice(0, 2)} />
       {paths.includes("/approach") && (
         <section className="section light approach-preview">
           <div>
-            <p className="section-label">A considered approach</p>
+            <p className="section-label">The Arnold Workforce Framework</p>
             <h2>
-              A clear brief.
-              <br />A shared direction.
+              Understand. Design.
+              <br />
+              Build. Scale.
             </h2>
             <LinkButton href="/approach" quiet>
               How we work together
             </LinkButton>
           </div>
           <div>
-            {[
-              [
-                "01",
-                "Understand the business context",
-                "What needs to change? Start with the work ahead and the contribution people need to make.",
-              ],
-              [
-                "02",
-                "Agree the scope and ownership",
-                "Define the priorities, the work involved and who owns each decision.",
-              ],
-              [
-                "03",
-                "Review what matters",
-                "Review progress, remove stalled decisions and adjust when the business requirement changes.",
-              ],
-            ].map(([n, title, copy]) => (
+            {workforceFramework.map(([n, title, copy]) => (
               <div className="checkpoint" key={n}>
                 <span>{n}</span>
                 <div>
@@ -308,11 +272,12 @@ export function Home({
           </div>
         </section>
       )}
+      <ContentChapters sections={homeWorkforceSections.slice(2)} />
       {articles.length ? (
         <section className="section">
           <div className="capability-head">
             <div>
-              <p className="section-label">Perspectives</p>
+              <p className="section-label">Arnold Insights</p>
               <h2>
                 Better questions.
                 <br />
@@ -320,7 +285,7 @@ export function Home({
               </h2>
             </div>
             <LinkButton href="/insights" quiet>
-              Explore our perspectives
+              Explore Arnold Insights
             </LinkButton>
           </div>
           <InsightTeasers articles={articles} />

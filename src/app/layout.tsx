@@ -18,8 +18,7 @@ export const metadata: Metadata = {
     default: "Arnold Consulting | Business ambition. People to make it happen.",
     template: "%s | Arnold Consulting",
   },
-  description:
-    "Leadership search, specialist talent, recruitment outsourcing and people capability for businesses and GCC teams.",
+  description: company.description,
   robots: { index: publicReleaseEnabled, follow: publicReleaseEnabled },
   ...(productionOrigin ? { metadataBase: new URL(productionOrigin) } : {}),
 };
@@ -50,6 +49,7 @@ export default async function RootLayout({
                     "@type": "Organization",
                     "@id": productionOrigin + "/#organization",
                     name: "Arnold Consulting",
+                    description: company.description,
                     url: productionOrigin,
                     sameAs: [company.linkedin],
                   },

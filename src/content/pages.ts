@@ -16,11 +16,11 @@ const basePages: EditorialPage[] = [
   consultingPage,
   {
     path: "/gcc",
-    label: "GCC & Technology",
-    title: "Business mandate first. Talent in the right sequence.",
+    label: "GCC & Enterprise Capability",
+    title: "Build, scale and transform global capability from India.",
     summary:
-      "Connect the centre’s business mandate to its first leaders, critical specialists and recruitment capacity. Build the people plan in the sequence the work requires.",
-    cta: "Discuss GCC talent priorities",
+      "Build the workforce behind your GCC mandate: leadership, product and engineering, technology and AI talent, critical skills and recruitment capacity, sequenced around the work ahead.",
+    cta: "Build your GCC team",
     interest: "gcc",
     image: "bengaluru-aerial.jpg",
     alt: "Bengaluru cityscape illustrating a technology and GCC talent context",
@@ -31,7 +31,21 @@ const basePages: EditorialPage[] = [
         paragraphs: [
           "A GCC talent requirement should follow the business mandate. The team may be taking ownership of a function, extending a technology capability or supporting an established operation. Each situation creates different leadership, specialist and recruitment needs.",
           "Begin with the work the centre is expected to own, the decisions it will hold and the stage it has reached. Separate approved requirements from possible future growth. Make dependencies visible so a hiring plan reflects business readiness as well as ambition.",
-          "Arnold’s focus is the people dimension: leadership search, continuing specialist roles, recruitment capacity and scoped workforce or capability needs. Entity establishment, facilities, infrastructure and technology implementation require their own accountable providers and are outside this talent-support remit.",
+          "Our consulting conversation turns that mandate into a people and workforce roadmap: leadership responsibilities, critical roles, hiring waves and the decisions needed to proceed. Executive Search, specialist recruitment, RPO and capability building then support the priorities within the agreed engagement.",
+        ],
+      },
+      {
+        id: "gcc-growth",
+        title: "GCC setup, scaling and transformation: the people dimension.",
+        paragraphs: [
+          "For a new GCC, connect workforce planning with the first leaders, foundational specialists and recruitment readiness. As the centre scales, align hiring waves with the capability the global business expects it to own. For transformation, revisit the roles, skills and leadership needed for a changed mandate.",
+          "GCC leadership and leadership localisation start with clear decision rights between the India team and global stakeholders. Product and engineering, technology and AI talent, and capability-building needs then follow that mandate, with recruitment and learning activities defined around the centre's priorities.",
+          "Arnold’s contribution is leadership, talent and workforce capability. Full GCC establishment, legal or tax structuring, facilities, infrastructure and technology implementation need separately accountable specialists; these are not implied by GCC talent support.",
+        ],
+        bullets: [
+          "Setup: Frame GCC leadership, critical skills, foundational talent and a workable recruitment plan.",
+          "Scale: Connect specialist hiring, workforce capacity and recruitment governance with the next business milestone.",
+          "Transform: Review leadership, technology and AI skills, workforce planning and capability needs around the new mandate.",
         ],
       },
       {
@@ -79,7 +93,7 @@ const basePages: EditorialPage[] = [
             ["Defined workforce duration or capacity", "Temporary Staffing"],
             [
               "A scoped people issue or learning need",
-              "HR Solutions or Training, subject to confirmed scope",
+              "HR Solutions or Capability Building, subject to confirmed scope",
             ],
           ],
         },
@@ -108,8 +122,8 @@ const basePages: EditorialPage[] = [
     label: "For employers",
     title: "Start with the question your business needs to answer.",
     summary:
-      "You do not need to choose a service before the first conversation. Describe the work ahead, the people requirement and where you need support.",
-    cta: "Discuss your business needs",
+      "Begin with business consulting or a defined delivery need. Connect your next stage of growth with the leadership, talent, workforce and capability required to make it happen.",
+    cta: "Discuss a business priority",
     sections: [
       {
         id: "starting-point",
@@ -121,6 +135,10 @@ const basePages: EditorialPage[] = [
           caption: "What does your business need next?",
           headings: ["Situation", "Start with"],
           rows: [
+            [
+              "We need to translate our growth priority into a practical plan",
+              "Business Consulting",
+            ],
             ["We need a leader for a critical mandate", "Executive Search"],
             [
               "We are hiring for continuing specialist roles",
@@ -129,7 +147,7 @@ const basePages: EditorialPage[] = [
             ["Our hiring programme needs recruitment capacity", "RPO"],
             ["We need capacity for a defined period", "Temporary Staffing"],
             ["We need to scope a people issue", "HR Solutions"],
-            ["We need to develop a specific capability", "Training"],
+            ["We need to develop a specific capability", "Capability Building"],
           ],
         },
       },
@@ -167,17 +185,17 @@ const basePages: EditorialPage[] = [
   },
   {
     path: "/approach",
-    label: "Our approach",
-    title: "A clear brief. A shared direction.",
+    label: "The Arnold Workforce Framework",
+    title: "Understand. Design. Build. Scale.",
     summary:
-      "Understand the business question. Agree the work and who owns it. Use practical checkpoints to keep the next decision moving.",
-    cta: "Discuss your business needs",
+      "Connect business priorities with leadership, talent, workforce and capability. Four practical stages keep advice, execution and review aligned with the work ahead.",
+    cta: "Discuss a business priority",
     image: "architecture-reflection.jpg",
     alt: "Illustrative architectural reflection",
     sections: [
       {
         id: "understand",
-        title: "01 — Understand the business context.",
+        title: "01 — Understand.",
         paragraphs: [
           "Begin with the work ahead and the people implications. Why is the requirement a priority? What should the role, team or engagement make possible? Which decisions are settled, and which need to be clarified?",
           "The answer helps distinguish a specialist search from a leadership mandate, a recruitment programme or a people capability need. The service follows the requirement.",
@@ -185,7 +203,7 @@ const basePages: EditorialPage[] = [
       },
       {
         id: "agree",
-        title: "02 — Agree the scope and ownership.",
+        title: "02 — Design.",
         paragraphs: [
           "Define the activities, intended deliverables, boundaries and responsibilities. Identify the client sponsor, the decision makers and the information or access required. Confirm the actual methods and any checking, reporting or service-level commitments.",
           "The scope should explain what happens when priorities change. A new requirement or a material change in demand deserves an explicit review rather than an informal expansion.",
@@ -193,7 +211,7 @@ const basePages: EditorialPage[] = [
       },
       {
         id: "coordinate",
-        title: "03 — Coordinate the work and the decisions.",
+        title: "03 — Build.",
         paragraphs: [
           "Connect delivery activities with the client’s internal team and systems. For recruitment, this includes role calibration, sourcing and screening responsibilities, interview coordination, feedback and appointment decisions as agreed.",
           "Keep candidate communication deliberate. Establish who gives updates, what information can be shared and where sensitive material should be handled. Avoid creating parallel records without a clear purpose.",
@@ -201,9 +219,9 @@ const basePages: EditorialPage[] = [
       },
       {
         id: "review",
-        title: "04 — Review progress and adapt deliberately.",
+        title: "04 — Scale.",
         paragraphs: [
-          "Use agreed checkpoints to discuss what has progressed, what remains unresolved and who owns the next action. Reporting should support a decision rather than simply describe activity.",
+          "Measure progress against the agreed purpose, improve delivery and adapt capacity as business demand changes. Review what has progressed, what remains unresolved and who owns the next action. Reporting should support a decision rather than simply describe activity.",
           "At the end of a defined engagement, confirm handover and closure. For continuing work, review the scope, capacity and operating fit. The working model should remain appropriate to the business requirement.",
         ],
       },
@@ -212,9 +230,10 @@ const basePages: EditorialPage[] = [
   {
     path: "/about",
     label: "About Arnold",
-    title: "A business perspective. A people focus.",
+    title:
+      "Around 15 years of market experience. A forward-looking people focus.",
     summary:
-      "Based in India and serving clients in the USA, Arnold Consulting connects leadership, talent and people capability with the work a business needs to do next.",
+      "Rooted in Bengaluru and serving clients in the USA, Arnold connects business consulting with leadership, talent, workforce and capability-building delivery for the next stage of growth.",
     cta: "Start a conversation",
     image: "architecture-reflection.jpg",
     alt: "Architectural forms reflected in glass, used illustratively",
@@ -223,8 +242,8 @@ const basePages: EditorialPage[] = [
         id: "perspective",
         title: "Start with the business, then define the support.",
         paragraphs: [
-          "A people requirement gains meaning from its context. A specialist role may enable a new capability. A leadership appointment may shape the direction of a function. A recruitment programme may help a business organise sustained demand.",
-          "Six capabilities give those conversations a clear starting point: Permanent Staffing, Executive Search, Recruitment Process Outsourcing, HR Solutions, Temporary Staffing and Training. Choose the engagement around the requirement, with its scope and responsibilities agreed from the start.",
+          "Business consulting is the starting conversation: understand the growth priority, clarify the people and workforce decisions, and build a practical roadmap. A specialist role may enable a new capability. A leadership appointment may shape the direction of a function. Recruitment capacity may support the next stage of growth.",
+          "Leadership, Talent, Workforce, Capability and GCC connect six delivery services: Permanent Staffing, Executive Search, Recruitment Process Outsourcing, HR Solutions, Temporary Staffing and capability building through Training. Choose the engagement around the requirement, with its scope and responsibilities agreed from the start.",
         ],
       },
       {

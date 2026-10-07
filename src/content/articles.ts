@@ -1,9 +1,10 @@
 import { expandSections, readingMinutes } from "./enhancements";
 import type { Article } from "./types";
+import { futureWorkArticles } from "./future-work-articles";
 const baseArticles: Article[] = [
   {
     slug: "planning-a-gcc-hiring-roadmap",
-    topic: "GCC & Technology",
+    topic: "GCC",
     title: "A hiring roadmap starts with the business mandate.",
     readMinutes: 7,
     summary:
@@ -80,7 +81,7 @@ const baseArticles: Article[] = [
   },
   {
     slug: "choosing-an-rpo-engagement",
-    topic: "Recruitment capacity",
+    topic: "Workforce",
     title: "What should an RPO engagement actually own?",
     readMinutes: 7,
     summary:
@@ -244,14 +245,16 @@ const baseArticles: Article[] = [
   },
 ];
 
-export const articles: Article[] = baseArticles.map((article) => {
-  const sections = expandSections(
-    `/insights/${article.slug}`,
-    article.sections,
-  );
-  return {
-    ...article,
-    sections,
-    readMinutes: readingMinutes(article.summary, sections),
-  };
-});
+export const articles: Article[] = [...baseArticles, ...futureWorkArticles].map(
+  (article) => {
+    const sections = expandSections(
+      `/insights/${article.slug}`,
+      article.sections,
+    );
+    return {
+      ...article,
+      sections,
+      readMinutes: readingMinutes(article.summary, sections),
+    };
+  },
+);

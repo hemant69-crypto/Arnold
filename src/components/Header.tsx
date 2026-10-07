@@ -10,7 +10,7 @@ const groups = [
     ["Capabilities", "/capabilities"],
   ],
   [
-    ["GCC & Technology", "/gcc"],
+    ["GCC", "/gcc"],
     ["Approach", "/approach"],
     ["About", "/about"],
   ],
@@ -26,7 +26,7 @@ const services = [
   ["Recruitment Process Outsourcing", "recruitment-process-outsourcing"],
   ["HR Solutions", "hr-solutions"],
   ["Temporary Staffing", "temporary-staffing"],
-  ["Training", "training"],
+  ["Capability Building", "training"],
 ];
 export function Header({
   available,
@@ -264,7 +264,7 @@ export function Header({
                   ["Home", "/"],
                   ["Consulting", "/consulting"],
                   ["Capabilities", "/capabilities"],
-                  ["GCC & Technology", "/gcc"],
+                  ["GCC & Enterprise Capability", "/gcc"],
                   ["Expertise", "/expertise"],
                   ["For employers", "/employers"],
                 ]

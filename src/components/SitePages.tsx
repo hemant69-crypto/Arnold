@@ -15,6 +15,7 @@ import { Families, InsightTeasers } from "./Home";
 import { LinkButton } from "./LinkButton";
 import { ContactForm } from "./ContactForm";
 import { SectionVideo } from "./SectionVideo";
+import { homeWorkforceSections } from "@/content/workforce";
 export function Editorial({ page }: { page: EditorialPage }) {
   return (
     <>
@@ -75,19 +76,27 @@ export function Editorial({ page }: { page: EditorialPage }) {
     </>
   );
 }
-export function Capabilities({ available }: { available: string[] }) {
+export function Capabilities({
+  available,
+  paths,
+}: {
+  available: string[];
+  paths: string[];
+}) {
   return (
     <>
       <PageIntro
         label="Our capabilities"
-        title="Different needs. Connected capabilities."
-        summary="Start with the business situation. Six services, organised into three families, provide clear routes to discuss leadership, talent, workforce capacity and people capability."
-        cta="Discuss your business needs"
+        title="From business priority to people capability."
+        summary="Business consulting sets the direction. Leadership, Talent, Workforce, Capability and GCC connect six delivery services with the priorities and practical plan that follow."
+        cta="Explore business consulting"
+        href="/consulting"
       />
       <section className="section">
-        <Families available={available} />
+        <Families available={available} paths={paths} />
       </section>
       <ContentChapters sections={enhancementSections["/capabilities"]} />
+      <ContentChapters sections={homeWorkforceSections.slice(0, 2)} />
       <section className="section light context">
         <p className="section-label">Choosing the right starting point</p>
         <div>
@@ -99,14 +108,15 @@ export function Capabilities({ available }: { available: string[] }) {
               requirement need different responsibility maps.
             </p>
             <p>
-              If the service is not yet clear, bring the objective, the people
-              involved and the timing. The first step is to understand the
-              requirement and confirm an appropriate scope.
+              Begin with business consulting when the route is still open. Bring
+              the objective, the decisions ahead and the timing. We connect
+              those priorities with a practical people and workforce plan, then
+              agree the right delivery.
             </p>
           </div>
           <div className="related-links">
-            <LinkButton href="/employers" quiet>
-              Prepare for a conversation
+            <LinkButton href="/consulting" quiet>
+              Start with business consulting
             </LinkButton>
           </div>
         </div>
@@ -178,9 +188,9 @@ export function Insights({ articles }: { articles: Article[] }) {
   return (
     <>
       <PageIntro
-        label="Perspectives"
-        title="Better questions for the decisions ahead."
-        summary="Practical thinking on leadership mandates, recruitment capacity and GCC hiring. Start with the context, make the responsibilities clear and keep the next decision in view."
+        label="Arnold Insights"
+        title="Perspectives on what comes next."
+        summary="Leadership. Workforce. AI & Work. GCC. Talent & Skills. Practical thinking for business leaders and professionals making decisions about the next stage."
       />
       <ContentChapters
         sections={enhancementSections["/insights"].slice(0, 1)}
@@ -205,14 +215,15 @@ export function Contact({
       <PageIntro
         label="Contact"
         title="What does your business need next?"
-        summary="Tell us about the work ahead and the people requirement. A short outline is enough to begin a useful conversation."
+        summary="Start with your business priority: growth, a leadership decision, a GCC mandate or a workforce challenge. We can clarify the consulting conversation and the delivery that follows."
       />
       <section className="section light contact-layout">
         <div>
           <h2>Start with the context.</h2>
           <p>
-            Share the role, function, programme or capability you want to
-            discuss. We can clarify the service and scope around the
+            Share what you want the business to achieve, what is getting in the
+            way and which decisions need attention. You can begin with business
+            consulting or bring a defined leadership, talent, GCC or workforce
             requirement.
           </p>
           <div className="notice">
@@ -242,8 +253,8 @@ export function Opportunities({ ats }: { ats: string | null }) {
     <>
       <PageIntro
         label="Opportunities"
-        title="Your next chapter deserves a clear starting point."
-        summary="Explore career opportunities through Arnold’s application portal when it is connected. Applications and candidate information belong in the ATS, separate from business enquiries."
+        title="Your career is changing. We help you stay ahead."
+        summary="Find opportunities that match your skills, ambitions and future potential. Explore the work behind the role, prepare for interviews and build the skills your next chapter requires."
       />
       <section className="section light service-layout">
         <SectionNav

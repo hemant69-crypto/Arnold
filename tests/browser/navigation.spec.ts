@@ -148,7 +148,7 @@ test("content links, related pages and service-interest buttons arrive at the to
       "/expertise",
     );
   }
-  expect(visited.size).toBe(5);
+  expect(visited.size).toBe(7);
   for (const interest of ["executive-search", "training", "hr-solutions"]) {
     await menuLink(page, `/capabilities/${interest}`);
     await follow(
@@ -314,7 +314,7 @@ test("short-screen menu keeps keyboard focus visible and reopens at its beginnin
   await page.screenshot({ path: "output/playwright/menu-landscape.png" });
 });
 
-test("all 25 pages retain header separation, responsive reflow and intact images", async ({
+test("all 27 pages retain header separation, responsive reflow and intact images", async ({
   page,
 }) => {
   test.setTimeout(120000);

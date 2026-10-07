@@ -1,8 +1,12 @@
 # Arnold Consulting — Phase 1 website
 
-Complete local implementation: 25 routes and a real 404, six services, three original perspectives, pointer-responsive opening, Hindi hero lens, animated top navigation and selected cinematic sections. Hindi is limited to the homepage hero and its headline preview; all other content stays English. Content is a reviewable draft, not approval of company claims. Public release and account-dependent integrations remain gated.
+**Latest content refinement, 8 October 2026:** Business consulting is the lead proposition, with GCC, leadership, talent, workforce and capability-building delivery underneath. The homepage links directly to Consulting, its business situations/outputs are more concrete, and three connected buyer journeys appear on Capabilities. Existing design and ATS state are preserved. [The current buyer review and QA handoff](../docs/ENTERPRISE_BUYER_REVIEW.md) records build `46f455a6-be2f-4b3e-a377-63611a3cbdd0`, all 47 browser checks and the new four-page founder-ambition report. Earlier reports retain their build-specific evidence.
+
+Complete local implementation: 27 routes and a real 404, six services, five original perspectives, pointer-responsive opening, Hindi hero lens, animated top navigation and selected cinematic sections. Hindi is limited to the homepage hero and its headline preview; all other content stays English. Content is a reviewable draft, not approval of company claims. Public release and account-dependent integrations remain gated.
 
 The content enhancement adds 69 chapters across 23 inner routes, practical service FAQs, contextual reading links, verified company LinkedIn placements and a compact “Trusted by clients” homepage strip. The finished Consulting page is preserved. ATS remains pending. See [the content enhancement handoff](../docs/CONTENT_ENHANCEMENT_QA.md) for the latest combined verification and source/rights records.
+
+**Founder content revision, 7 October:** Five business-facing themes now organise the six services: Leadership, Talent, Workforce, Capability and GCC. Training is displayed as Capability Building with its existing route retained. The hero, GCC/RPO/flexible workforce content, skills intelligence, Advantage, outcome objectives, four-stage framework and candidate guidance follow the supplied recommendations, while the CSS, visual assets, motion and integration state remain unchanged. ATS stays pending. [The response register](../docs/FOUNDER_CONTENT_RESPONSE.md) and [current QA / seven-page report handoff](../docs/FOUNDER_CONTENT_QA.md) control this content update; previous reports retain their build-specific results.
 
 ## Run locally
 
@@ -30,7 +34,9 @@ See [Netlify setup](NETLIFY.md). The repository root is this application. `netli
 - `src/content/pages.ts`: GCC, expertise, Employers, Approach and About; registers the Consulting page.
 - `src/content/consulting.ts`: the complete Consulting narrative, stable section IDs and six advisory/service mappings.
 - `src/components/Consulting.tsx`, `ConsultingMotion.tsx`, `src/app/consulting.css`: Consulting composition and responsive reading layouts; deferred effects are in `src/lib/motion/consulting-scenes.ts`.
-- `src/content/articles.ts`: three original perspective drafts; local new articles also need their route added to `src/content/routes.ts`.
+- `src/content/workforce.ts`: five theme definitions, homepage workforce/intelligence/Advantage/outcome copy and the four-stage framework.
+- `src/content/future-work-articles.ts`: two substantive original AI & Work / Talent & Skills perspectives.
+- `src/content/articles.ts`: five original perspective drafts; local new articles also need their route added to `src/content/routes.ts`.
 - `src/content/legal.ts`: truthful preview policies; replace with reviewed entity/provider/retention/contact details before live collection.
 - `src/content/enhancements/`: 69 additional chapters, stable insertion anchors, practical FAQs, contextual resources and presentation choices. The original service/editorial/article/legal collections retain their base sections and compose these additions through the existing content shapes. Reading time follows actual article content.
 - `src/components/ContentChapter.tsx`, `src/app/content-enhancement.css`: original examples, mobile comparison rows, real sequences, compact utility composition and server-rendered contextual links.

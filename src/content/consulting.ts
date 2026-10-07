@@ -41,19 +41,19 @@ export const consultingAdvisory = [
 
 export const consultingPage: EditorialPage = {
   path: "/consulting",
-  label: "Consulting",
-  title: "Business consulting for your next chapter.",
+  label: "Business Consulting",
+  title: "Business consulting for your next stage.",
   summary:
-    "Leadership, talent and workforce capability, aligned with where your business needs to go.",
-  cta: "Discuss your business priorities",
+    "Clearer business priorities. Practical decisions about leadership, talent, workforce and capability. A connected route to execution.",
+  cta: "Discuss a business priority",
   interest: "consulting",
   sections: [
     {
       id: "hero-context",
-      title: "Business consulting",
+      title: "Business consulting, connected to delivery",
       paragraphs: [
-        "Growth changes what a business needs from its people. A new direction may call for different leadership, specialist skills, more hiring capacity or a clearer way of working.",
-        "Arnold Consulting works with business leaders to connect those needs with a practical response. We begin with your priorities, shape the right engagement and bring relevant advisory and delivery capabilities together around the work ahead.",
+        "A growth ambition creates decisions before it creates a hiring list. What must the business become capable of doing? Who will lead it? Which skills, workforce models and ways of working will support that direction?",
+        "We help leaders turn those questions into a focused business and people agenda: priorities, choices, a practical roadmap and clear responsibilities. Our leadership, talent, workforce, capability-building and GCC services connect that advice with delivery.",
       ],
     },
     {
@@ -63,7 +63,7 @@ export const consultingPage: EditorialPage = {
         "A growth plan becomes real through the decisions a business makes about its people: who will lead, which capabilities matter, how work will be resourced and what needs to change as the organisation develops.",
         "Those decisions are connected. A critical leadership appointment influences the team that follows. A new capability changes the hiring requirement. A larger recruitment programme places different demands on internal capacity, management attention and the candidate experience.",
         "Our consulting approach brings these questions into the same conversation. We work from the business priority towards a focused people and workforce agenda, with clear choices about what to address first and how to put the agreed response into practice.",
-        "The starting point may be a leadership mandate, a growing team, a recruitment process under pressure or a capability gap. The purpose is consistent: connect the work your business needs to do with the people and practical arrangements that can support it.",
+        "The starting point may be an expansion plan, a leadership transition, a GCC mandate or a capability gap. We clarify the business decision first, then identify the leadership, talent and workforce response. You can begin with consulting and agree delivery when the right route is clear.",
       ],
       bullets: [
         "A useful recommendation should make the next decision clearer.",
@@ -73,7 +73,7 @@ export const consultingPage: EditorialPage = {
       id: "business-priorities",
       title: "Where does your business need to move forward?",
       paragraphs: [
-        "You may have a clear requirement, or you may still be working out what the business needs. These are useful places to start.",
+        "Begin with the business situation. We connect the decision you need to make with practical advisory work and the delivery capabilities that can follow.",
       ],
       table: {
         caption: "Where does your business need to move forward?",
@@ -81,27 +81,27 @@ export const consultingPage: EditorialPage = {
         rows: [
           [
             "Preparing for growth",
-            "Your next stage requires more than an additional hiring list. Identify the leadership, specialist roles and recruitment capacity that the business will depend on.",
+            "Translate the growth priority into a people and workforce roadmap: the leadership, critical skills, capacity and dependencies to address first.",
           ],
           [
             "Appointing a critical leader",
-            "An important role needs a shared mandate. Align the expectations, business context and contribution required before the search begins.",
+            "Clarify what the leader must accomplish, align stakeholders and shape a shared mandate. Executive Search then follows that business decision.",
           ],
           [
             "Making hiring work more effectively",
-            "Demand is increasing, decisions are slowing or the process is producing inconsistent results. Examine the work, responsibilities and constraints behind the hiring requirement.",
+            "Map demand, decision bottlenecks and internal recruitment capacity. Choose project, modular or enterprise RPO around the work and responsibilities involved.",
           ],
           [
             "Balancing workforce capacity",
-            "Some needs are continuing; others are tied to a project or a period of change. Consider the staffing arrangement alongside the duration, supervision and work involved.",
+            "Compare permanent, contract and contract-to-hire requirements around the duration, work and responsibilities. Build a workforce model that fits business demand.",
           ],
           [
             "Strengthening people capability",
-            "A team needs to work differently, managers need support or a skill gap is becoming visible. Define the issue and the capability to develop before choosing an intervention.",
+            "Identify the work that needs to change, the skills involved and the audience. Connect the priority with a focused people or learning engagement, including AI readiness where relevant.",
           ],
           [
             "Building a GCC or technology team",
-            "The business mandate must translate into leadership, specialist roles and a workable hiring sequence. Connect the team plan with the centre's actual responsibilities.",
+            "Translate the centre's business mandate into leadership responsibilities, critical roles and hiring waves. Connect the roadmap with specialist talent and recruitment capacity.",
           ],
         ],
       },
@@ -193,7 +193,7 @@ export const consultingPage: EditorialPage = {
       title: "Build capability around the work people need to do.",
       paragraphs: [
         "A useful learning engagement starts with application. Identify the audience, the situations they need to handle and the skill or behaviour they need to develop.",
-        "We connect the learning brief with that business context, then agree the objectives and appropriate delivery scope. The plan should also consider how participants will practise, what support managers can provide and how the learning will be reviewed in the workplace. This gives Training a clear purpose within the broader people agenda.",
+        "We connect the learning brief with that business context, then agree the objectives and appropriate delivery scope. The plan should also consider how participants will practise, what support managers can provide and how the learning will be reviewed in the workplace. This gives capability building a clear purpose within the broader people agenda.",
       ],
       bullets: [
         "Audience",
@@ -216,7 +216,7 @@ export const consultingPage: EditorialPage = {
       title: "Advice should leave you with something you can use.",
       paragraphs: [
         "An engagement should make the work more concrete. The appropriate outputs depend on the question being addressed, the information available and the scope agreed with your team.",
-        "The output may take the form of a calibrated leadership brief, a hiring-priority roadmap, a recruitment responsibility map or a learning brief. The right format is the one that helps your team act on the issue in view.",
+        "Depending on the requirement, your team receives a people and workforce roadmap, a calibrated leadership brief, a recruitment responsibility map or a focused learning brief. These make the next decision, the route to delivery and the measures of progress explicit.",
       ],
       table: {
         caption: "Advice should leave you with something you can use.",
@@ -227,8 +227,8 @@ export const consultingPage: EditorialPage = {
             "A shared account of the business priority, the people or workforce implications and the decision that needs attention.",
           ],
           [
-            "A map of priorities and dependencies",
-            "The roles, skills or activities to address first, alongside the assumptions and decisions that influence what follows.",
+            "A people and workforce roadmap",
+            "The leadership, roles, skills and capacity to address first, sequenced around business milestones, assumptions and dependencies.",
           ],
           [
             "A considered route to delivery",
@@ -247,12 +247,12 @@ export const consultingPage: EditorialPage = {
     },
     {
       id: "working-together",
-      title: "From the business question to the work ahead.",
+      title: "The Arnold Workforce Framework.",
       paragraphs: [],
     },
     {
       id: "engagement-1",
-      title: "Understand the context",
+      title: "Understand",
       paragraphs: [
         "We begin with the business priority, the part of the organisation involved and the situation you want to change. Your leaders and relevant teams help establish what is known, what remains uncertain and why the issue matters now.",
       ],
@@ -260,7 +260,7 @@ export const consultingPage: EditorialPage = {
     },
     {
       id: "engagement-2",
-      title: "Set the priorities",
+      title: "Design",
       paragraphs: [
         "We examine the people and workforce implications, identify the choices available and agree where attention will have the greatest practical value. Relevant information may include role briefs, hiring plans, process responsibilities and capability needs.",
       ],
@@ -270,9 +270,9 @@ export const consultingPage: EditorialPage = {
     },
     {
       id: "engagement-3",
-      title: "Agree and deliver the work",
+      title: "Build",
       paragraphs: [
-        "We define the activities, deliverables, responsibilities and review arrangements. Where the response includes search, staffing, RPO, HR Solutions or Training, the delivery scope connects back to the original business requirement.",
+        "We put the agreed plan into practice with your team. Search, staffing, RPO, HR Solutions or capability building follows the priorities established through consulting, with named owners, delivery activities and review arrangements.",
       ],
       bullets: [
         "Who owns each activity and approval, and what needs to be in place?",
@@ -280,9 +280,9 @@ export const consultingPage: EditorialPage = {
     },
     {
       id: "engagement-4",
-      title: "Review and adjust",
+      title: "Scale",
       paragraphs: [
-        "We review progress against the agreed purpose, discuss the decisions that need attention and revisit assumptions when the requirement changes. Completion should leave the next step clear, whether that means continuing, adapting or closing the engagement.",
+        "We measure progress against the agreed purpose, improve delivery, discuss the decisions that need attention and adapt capacity when the requirement changes. Completion should leave the next step clear, whether that means continuing, adapting or closing the engagement.",
       ],
       bullets: [
         "What has changed, what remains open and what should happen next?",
@@ -335,7 +335,7 @@ export const consultingPage: EditorialPage = {
             "temporary-staffing",
           ],
           [
-            "Training",
+            "Capability Building",
             "Develop capability around a defined audience and learning purpose",
             "training",
           ],
@@ -385,7 +385,7 @@ export const consultingPage: EditorialPage = {
       id: "question-1",
       title: "What does business consulting mean at Arnold?",
       paragraphs: [
-        "Our focus is the connection between a business priority and the leadership, talent or workforce capability needed to support it. An engagement may address a critical appointment, hiring priorities, recruitment capacity, a people issue or a learning need. We agree the specific advisory and delivery scope around the requirement.",
+        "We help leaders translate growth and transformation priorities into decisions about leadership, talent, workforce capacity and capability. The engagement can clarify priorities, compare delivery options and define a practical roadmap. Workforce & Talent Consulting and People & Workforce Advisory sit within this focus; search, recruitment, RPO, staffing and capability building provide routes to execution.",
       ],
     },
     {

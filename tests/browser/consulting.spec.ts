@@ -10,7 +10,7 @@ test("consulting has a complete business-led narrative, correct navigation and e
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/consulting");
   await expect(page.locator("main h1")).toHaveText(
-    "Business consulting for your next chapter.",
+    "Business consulting for your next stage.",
   );
   await expect(page.locator("main h1")).toHaveCount(1);
   await expect(page.locator(".consulting-advisory-item")).toHaveCount(6);
@@ -24,14 +24,14 @@ test("consulting has a complete business-led narrative, correct navigation and e
   expect(copy).not.toMatch(/TODO|TBC|internal note|Apex|[\u0900-\u097f]/i);
   expect(
     copy!.match(
-      /Your next stage requires more than an additional hiring list/g,
+      /Translate the growth priority into a people and workforce roadmap/g,
     ),
   ).toHaveLength(1);
   expect(await page.locator(".nav-groups a").allTextContents()).toEqual([
     "Home",
     "Consulting",
     "Capabilities",
-    "GCC & Technology",
+    "GCC",
     "Approach",
     "About",
     "Insights",
@@ -55,10 +55,21 @@ test("consulting has a complete business-led narrative, correct navigation and e
   ).toBeDisabled();
   await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
   await page.goto("/");
-  await page
-    .getByRole("link", { name: "Explore consulting", exact: true })
-    .click();
+  await expect(page.locator(".hero-lower > p")).toContainText(
+    "Business consulting for your next stage of growth.",
+  );
+  await page.locator('.hero-actions a[href="/consulting"]').click();
   await expect(page).toHaveURL(/\/consulting$/);
+  await page.goto("/capabilities#cap3");
+  await expect(page.locator("#cap3 li")).toHaveCount(6);
+  for (const href of [
+    "/consulting",
+    "/gcc",
+    "/capabilities/executive-search",
+    "/capabilities/recruitment-process-outsourcing",
+  ]) {
+    await expect(page.locator(`#cap3 a[href="${href}"]`)).toHaveCount(1);
+  }
 });
 
 test("consulting motion respects pause, menu suspension and runtime reduced motion", async ({

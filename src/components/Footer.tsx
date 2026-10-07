@@ -2,7 +2,7 @@ import { SiteLink as Link } from "./SiteLink";
 import { CompanyLinkedIn } from "./SocialLink";
 import { Arrow, LinkButton } from "./LinkButton";
 export function Conversation({
-  title = "What does your next chapter need?",
+  title = "What does your next stage require?",
   interest = "",
 }: {
   title?: string;
@@ -10,15 +10,15 @@ export function Conversation({
 }) {
   return (
     <section className="conversation section">
-      <p className="section-label">Let’s start with your business</p>
+      <p className="section-label">Let’s start with the business question</p>
       <h2>{title}</h2>
       <LinkButton href={`/contact${interest ? `?interest=${interest}` : ""}`}>
-        Discuss your business needs
+        Discuss a business priority
       </LinkButton>
       <div className="candidate-entry">
         Looking for your next role?
         <Link href="/opportunities">
-          Explore opportunities <Arrow diagonal />
+          Find your next opportunity <Arrow diagonal />
         </Link>
       </div>
     </section>
@@ -38,9 +38,9 @@ export function Footer({
           arnold <span>consulting</span>
         </Link>
         <p>
-          Business consulting for leadership,
+          Business consulting.
           <br />
-          talent and workforce capability.
+          Connected to delivery.
         </p>
       </div>
       <div className="footer-nav">
@@ -55,7 +55,7 @@ export function Footer({
             ],
             ["HR Solutions", "hr-solutions"],
             ["Temporary Staffing", "temporary-staffing"],
-            ["Training", "training"],
+            ["Capability Building", "training"],
           ]
             .filter(([, slug]) => available.includes(slug))
             .map(([label, slug]) => (
@@ -67,13 +67,13 @@ export function Footer({
         <nav aria-label="Footer explore">
           <p>Explore</p>
           {[
-            ["Consulting", "/consulting"],
-            ["GCC & Technology", "/gcc"],
+            ["Business Consulting", "/consulting"],
+            ["GCC & Enterprise Capability", "/gcc"],
             ["Expertise", "/expertise"],
             ["For employers", "/employers"],
             ["Approach", "/approach"],
             ["About", "/about"],
-            ["Insights", "/insights"],
+            ["Arnold Insights", "/insights"],
           ]
             .filter(([, href]) => paths.includes(href))
             .map(([label, href]) => (
@@ -84,7 +84,7 @@ export function Footer({
         </nav>
         <nav aria-label="Footer connect">
           <p>Connect</p>
-          <Link href="/contact">Discuss your business needs</Link>
+          <Link href="/contact">Discuss a business priority</Link>
           <Link href="/opportunities">Opportunities</Link>
           <CompanyLinkedIn />
           <Link href="/privacy">Privacy</Link>

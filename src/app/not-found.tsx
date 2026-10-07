@@ -46,7 +46,7 @@ export default function NotFound() {
                 About Arnold
               </LinkButton>
               <LinkButton href="/insights" quiet>
-                Perspectives
+                Arnold Insights
               </LinkButton>
             </div>
           </div>

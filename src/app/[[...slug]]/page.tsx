@@ -36,12 +36,12 @@ const hubs: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Business ambition. People to make it happen.",
     description:
-      "Leadership search, specialist talent, recruitment outsourcing and people capability for businesses and GCC teams.",
+      "Business consulting for your next stage of growth, connected to leadership, talent, workforce capability and GCC teams. Around 15 years of market experience.",
   },
   "/capabilities": {
     title: "Our capabilities",
     description:
-      "Six connected services for leadership, talent acquisition, workforce delivery and people capability.",
+      "Business consulting sets the direction. Leadership, Talent, Workforce, Capability and GCC connect the advice with six practical delivery services.",
   },
   "/expertise": {
     title: "Our expertise",
@@ -49,14 +49,14 @@ const hubs: Record<string, { title: string; description: string }> = {
       "Technology, GCC and business-function talent contexts, connected with the work your organisation needs.",
   },
   "/insights": {
-    title: "Perspectives",
+    title: "Arnold Insights",
     description:
-      "Original perspectives on GCC hiring roadmaps, recruitment capacity and leadership mandates.",
+      "Original perspectives on leadership, workforce, AI and work, GCC, talent and skills.",
   },
   "/opportunities": {
-    title: "Opportunities",
+    title: "Find your next opportunity",
     description:
-      "Find the availability of Arnold’s candidate portal and prepare for the application journey.",
+      "Your career is changing. Prepare for interviews, explore future skills and check the availability of Arnold’s application portal.",
   },
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -75,9 +75,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const meta =
     path === "/consulting"
       ? {
-          title: "Business Consulting for Talent and Workforce",
+          title: "Business Consulting",
           description:
-            "Connect business priorities with leadership, talent and workforce capability. Explore Arnold Consulting’s approach to business and people decisions.",
+            "Turn growth priorities into a practical people and workforce roadmap. Business consulting connected to leadership, talent, workforce capability and GCC delivery.",
         }
       : service
         ? { title: service.name, description: service.summary }
@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             : (hubs[path] ?? {
                 title: "Arnold Consulting",
                 description:
-                  "Leadership search, specialist talent, recruitment outsourcing and people capability for businesses and GCC teams.",
+                  "Business consulting connected to leadership, talent, workforce capability and GCC teams.",
               });
   return pageMetadata(meta.title, meta.description, path);
 }
@@ -105,7 +105,12 @@ export default async function Page({ params }: Props) {
       />
     );
   if (path === "/capabilities")
-    return <Capabilities available={services.map((s) => s.slug)} />;
+    return (
+      <Capabilities
+        available={services.map((s) => s.slug)}
+        paths={contentPaths({ services, pages, articles })}
+      />
+    );
   if (path === "/expertise") return <Expertise />;
   if (path === "/insights") return <Insights articles={articles} />;
   if (path === "/opportunities") return <Opportunities ats={atsUrl} />;

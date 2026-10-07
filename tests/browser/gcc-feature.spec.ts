@@ -48,7 +48,7 @@ test("GCC content, image and service links reflow and remain accessible", async 
     await page.setViewportSize({ width, height: width >= 1024 ? 1200 : 900 });
     await page.goto("/");
     const section = page.getByRole("region", {
-      name: "Your next stage. The right people.",
+      name: "Global capability. Built around people.",
     });
     await section.getByRole("heading", { level: 2 }).scrollIntoViewIfNeeded();
     await expect(section.locator(".gcc-support a")).toHaveCount(3);
@@ -135,7 +135,7 @@ test("GCC content remains readable without JavaScript", async ({ browser }) => {
   await page.goto("/");
   const section = page.locator(".gcc-feature");
   await expect(section.locator("h2")).toHaveText(
-    "Your next stage.The right people.",
+    "Global capability.Built around people.",
   );
   await expect(section.locator(".gcc-support a")).toHaveCount(3);
   await section.locator("h2").scrollIntoViewIfNeeded();

@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { allRoutes } from "../../src/content/routes";
-test("all 25 direct routes, metadata, internal links, no script policy errors and real 404", async ({
+test("all 27 direct routes, metadata, internal links, no script policy errors and real 404", async ({
   page,
   request,
 }) => {
@@ -17,7 +17,7 @@ test("all 25 direct routes, metadata, internal links, no script policy errors an
     )
       failures.push(msg.text());
   });
-  expect(allRoutes).toHaveLength(25);
+  expect(allRoutes).toHaveLength(27);
   for (const path of allRoutes) {
     const response = await page.goto(path);
     expect(response?.status(), path).toBe(200);
@@ -43,7 +43,7 @@ test("all 25 direct routes, metadata, internal links, no script policy errors an
       );
     hrefs.forEach((href) => links.add(href));
   }
-  expect(titles.size).toBe(25);
+  expect(titles.size).toBe(allRoutes.length);
   expect(failures).toEqual([]);
   for (const href of links) {
     const response = await request.get(href);
@@ -71,6 +71,8 @@ test("representative pages pass automated WCAG 2.2 AA checks at desktop and mobi
       "/capabilities/training",
       "/insights/planning-a-gcc-hiring-roadmap",
       "/opportunities",
+      "/insights/building-human-capability-for-ai-enabled-work",
+      "/insights/mapping-critical-skills-before-you-hire",
       "/contact",
     ]) {
       await page.goto(path);
