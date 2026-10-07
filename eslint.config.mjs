@@ -5,6 +5,7 @@ import hooks from "eslint-plugin-react-hooks";
 export default defineConfig([
   globalIgnores([
     ".next/**",
+    ".netlify/**",
     "output/**",
     "next-env.d.ts",
     "security/csp-hashes.json",

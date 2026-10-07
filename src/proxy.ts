@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { randomBytes } from "node:crypto";
 import { contentSecurityPolicy } from "@/lib/csp";
 export function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const development = process.env.NODE_ENV === "development";
   const dynamic = path === "/contact" || path === "/thank-you";
-  const nonce = dynamic ? randomBytes(18).toString("base64") : undefined;
+  const nonce = dynamic
+    ? btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(18))))
+    : undefined;
   const policy = contentSecurityPolicy({ path, nonce, development });
   const headers = new Headers(request.headers);
   if (nonce) {

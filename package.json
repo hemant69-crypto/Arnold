@@ -13,7 +13,10 @@
     "lint": "eslint .",
     "test": "node --import tsx --test tests/*.test.ts",
     "qa:browser": "playwright test",
-    "format": "prettier --write src cms scripts tests *.ts *.mjs *.json"
+    "format": "prettier --write src cms scripts tests *.ts *.mjs *.json",
+    "predev": "node scripts/prepare-csp.mjs",
+    "pretypecheck": "node scripts/prepare-csp.mjs",
+    "pretest": "node scripts/prepare-csp.mjs"
   },
   "dependencies": {
     "@sanity/webhook": "4.0.4",

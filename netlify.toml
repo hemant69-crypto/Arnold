@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+  # Temporary review deployment; integrations stay unavailable.
+  PUBLIC_RELEASE_APPROVED = "false"
+  ENQUIRY_ENABLED = "false"
+  CMS_ENABLED = "false"
+
+# Keep the adapter automatically updated; also run it in local production builds.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

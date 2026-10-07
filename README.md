@@ -18,7 +18,11 @@ npm run start -- --port 3001
 
 Open http://127.0.0.1:3001. Development: `npm run dev -- --port 3000`. Both bind to this computer only. Stop a foreground preview with Control-C. No environment file is needed for the default preview. Copy `.env.example` to `.env.local` only when configuring verified integrations; never commit real values.
 
-Always use **npm run build**, not a direct framework build: the wrapper generates exact inline script hashes for each immutable HTML page. Keep `security/csp-hashes.json` alongside the matching build. A stale manifest is an error, not a reason to weaken the script policy. Dynamic Contact and confirmation pages use unique request nonces and private, uncached responses. Report-only CSP was exercised before enforcement. Production tests must use `npm run start`, because development intentionally permits its framework tooling.
+Always use **npm run build**, not a direct framework build. The wrapper uses two build passes with one build ID: it measures the immutable HTML scripts, then bundles their exact hashes into the proxy, and refuses output if the final scripts differ. The generated `security/csp-hashes.json` stays ignored; it is imported at compile time, with no filesystem access at request time. Clean checkouts prepare a placeholder before dev, tests and typechecking. Dynamic Contact and confirmation pages retain unique Web Crypto nonces and private, uncached responses. Production browser checks use `npm run start`; `netlify build --offline` additionally verifies provider packaging. Development intentionally permits its framework tooling.
+
+## Temporary Netlify deployment
+
+See [Netlify setup](NETLIFY.md). The repository root is this application. `netlify.toml` sets `npm run build`, `.next`, Node 24 and the automatically updated Next.js adapter. Temporary deployment retains noindex and disabled enquiry/CMS defaults; ATS remains unavailable until its link is supplied. Netlify is the user-selected temporary host. Local adapter/browser validation is recorded separately from an actual hosted deployment.
 
 ## Edit the experience
 

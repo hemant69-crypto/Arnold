@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  outputFileTracingIncludes: { "/*": ["./security/csp-hashes.json"] },
+  generateBuildId: async () => process.env.ARNOLD_BUILD_ID ?? null,
   images: { formats: ["image/avif", "image/webp"], qualities: [65, 75] },
   async headers() {
     return [

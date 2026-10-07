@@ -1,11 +1,7 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import bundledManifest from "../../security/csp-hashes.json";
 type HashManifest = { buildId: string; routes: Record<string, string[]> };
-let manifest: HashManifest | undefined;
+const manifest: HashManifest = bundledManifest;
 export function staticScriptHashes(path: string) {
-  manifest ??= JSON.parse(
-    readFileSync(join(process.cwd(), "security/csp-hashes.json"), "utf8"),
-  ) as HashManifest;
   return manifest.routes[path] ?? manifest.routes["/_not-found"] ?? [];
 }
 export function contentSecurityPolicy({
