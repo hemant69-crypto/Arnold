@@ -329,12 +329,17 @@ test("short-screen menu keeps keyboard focus visible and reopens at its beginnin
 test("all 33 pages retain header separation, responsive reflow and intact images", async ({
   page,
 }) => {
-  test.setTimeout(120000);
+  test.setTimeout(180000);
   await mkdir("output/playwright/navigation-audit", { recursive: true });
-  for (const width of [320, 768, 1440]) {
-    await page.setViewportSize({ width, height: 900 });
-    for (const path of allRoutes) {
-      await page.goto(path);
+  for (const path of allRoutes) {
+    // One visit per route checks the same layouts with less hosted traffic.
+    if (process.env.QA_ORIGIN?.startsWith("https://")) {
+      await page.waitForTimeout(1000);
+    }
+    await page.goto(path);
+    await expect(page.locator(".site-header")).toBeVisible();
+    for (const width of [320, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
       await page.evaluate(() => document.fonts.ready);
       const layout = await page.evaluate(() => {
         const bounds = (selector: string) =>
@@ -368,24 +373,29 @@ test("all 33 pages retain header separation, responsive reflow and intact images
           `${path}: nav/menu separation`,
         ).toBeGreaterThanOrEqual(24);
       }
-      const brokenImages = await page
-        .locator("img")
-        .evaluateAll(async (images) => {
-          await Promise.all(
-            images.map(async (image) => {
-              (image as HTMLImageElement).loading = "eager";
-              try {
-                await (image as HTMLImageElement).decode();
-              } catch {
-                /* Report below. */
-              }
+      // A resize can switch srcset while decode is pending. Wait for the
+      // selected image to finish rather than treating that cancellation as loss.
+      await expect
+        .poll(
+          () =>
+            page.locator("img").evaluateAll(async (images) => {
+              await Promise.all(
+                images.map(async (image) => {
+                  (image as HTMLImageElement).loading = "eager";
+                  try {
+                    await (image as HTMLImageElement).decode();
+                  } catch {
+                    /* Report below. */
+                  }
+                }),
+              );
+              return images
+                .filter((image) => !(image as HTMLImageElement).naturalWidth)
+                .map((image) => image.getAttribute("src"));
             }),
-          );
-          return images
-            .filter((image) => !(image as HTMLImageElement).naturalWidth)
-            .map((image) => image.getAttribute("src"));
-        });
-      expect(brokenImages, `${path} at ${width}px`).toEqual([]);
+          { message: `${path} at ${width}px`, timeout: 15000 },
+        )
+        .toEqual([]);
       if (width !== 768) {
         await page.screenshot({
           path: `output/playwright/navigation-audit/${path === "/" ? "home" : path.slice(1).replaceAll("/", "_")}-${width}.png`,

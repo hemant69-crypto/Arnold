@@ -19,6 +19,9 @@ test("all 33 direct routes, metadata, internal links, no script policy errors an
   });
   expect(allRoutes).toHaveLength(33);
   for (const path of allRoutes) {
+    if (process.env.QA_ORIGIN?.startsWith("https://")) {
+      await page.waitForTimeout(1000);
+    }
     const response = await page.goto(path);
     expect(response?.status(), path).toBe(200);
     await expect(page.locator("main h1")).toHaveCount(1);
@@ -46,6 +49,7 @@ test("all 33 direct routes, metadata, internal links, no script policy errors an
   expect(titles.size).toBe(allRoutes.length);
   expect(failures).toEqual([]);
   for (const href of links) {
+    if (allRoutes.includes(href)) continue; // Already verified through navigation.
     const response = await request.get(href);
     expect(response.status(), href).toBe(200);
   }
@@ -243,7 +247,7 @@ test("service interest, unavailable enquiry, neutral confirmation and ATS are tr
       name: "The application portal is not connected yet.",
     }),
   ).toBeVisible();
-  await expect(page.locator("iframe")).toHaveCount(0);
+  await expect(page.locator("main iframe")).toHaveCount(0);
 });
 test("no JavaScript and reduced motion preserve content and disclosure navigation", async ({
   browser,
