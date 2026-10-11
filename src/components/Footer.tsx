@@ -1,6 +1,7 @@
 import { SiteLink as Link } from "./SiteLink";
 import { CompanyLinkedIn } from "./SocialLink";
 import { Arrow, LinkButton } from "./LinkButton";
+import { pillars } from "@/content/pillars";
 export function Conversation({
   title = "What does your next stage require?",
   interest = "",
@@ -45,24 +46,17 @@ export function Footer({
       </div>
       <div className="footer-nav">
         <nav aria-label="Footer capabilities">
-          <p>Capabilities</p>
-          {[
-            ["Permanent Staffing", "permanent-staffing"],
-            ["Executive Search", "executive-search"],
-            [
-              "Recruitment Process Outsourcing",
-              "recruitment-process-outsourcing",
-            ],
-            ["HR Solutions", "hr-solutions"],
-            ["Temporary Staffing", "temporary-staffing"],
-            ["Capability Building", "training"],
-          ]
-            .filter(([, slug]) => available.includes(slug))
-            .map(([label, slug]) => (
-              <Link href={`/capabilities/${slug}`} key={slug}>
-                {label}
+          <p>Our service pillars</p>
+          {pillars
+            .filter((p) => paths.includes(p.href))
+            .map((p) => (
+              <Link href={p.href} key={p.href}>
+                {p.name}
               </Link>
             ))}
+          {available.includes("training") && (
+            <Link href="/capabilities/training">Capability Building</Link>
+          )}
         </nav>
         <nav aria-label="Footer explore">
           <p>Explore</p>

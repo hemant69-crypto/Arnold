@@ -30,7 +30,10 @@ test("consulting has a complete business-led narrative, correct navigation and e
   expect(await page.locator(".nav-groups a").allTextContents()).toEqual([
     "Home",
     "Consulting",
-    "Capabilities",
+    "Talent & Search",
+    "Workforce Solutions",
+    "Background Verification",
+    "HR Advisory",
     "GCC",
     "Approach",
     "About",
@@ -42,7 +45,8 @@ test("consulting has a complete business-led narrative, correct navigation and e
   const menuPaths = await page
     .locator("#menu-panel .expanded-nav a")
     .evaluateAll((links) => links.map((link) => link.getAttribute("href")));
-  expect(menuPaths.slice(0, 3)).toEqual(["/", "/consulting", "/capabilities"]);
+  expect(menuPaths.slice(0, 2)).toEqual(["/", "/consulting"]);
+  expect(menuPaths).toContain("/capabilities");
   await page.keyboard.press("Escape");
   await page
     .locator('.consulting-hero a[href="/contact?interest=consulting"]')

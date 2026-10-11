@@ -286,9 +286,7 @@ export function Consulting({
         </div>
         <div className="consulting-output-layout">
           <figure className="consulting-priority-map">
-            <figcaption>
-              A priority map <span>Illustrative format</span>
-            </figcaption>
+            <figcaption>A priority map</figcaption>
             <div className="consulting-map-graphic">
               <svg
                 viewBox="0 0 500 470"

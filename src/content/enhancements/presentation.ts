@@ -55,8 +55,8 @@ export const sectionResources: Record<string, Resource[]> = {
     service("Permanent Staffing", "permanent-staffing"),
     service("Executive Search", "executive-search"),
     service("RPO", "recruitment-process-outsourcing"),
-    service("Temporary Staffing", "temporary-staffing"),
-    service("HR Solutions", "hr-solutions"),
+    service("Workforce Solutions", "workforce-solutions"),
+    service("HR Advisory", "hr-advisory"),
     service("Capability Building", "training"),
   ],
   cap3: [
@@ -105,9 +105,55 @@ export const sectionResources: Record<string, Resource[]> = {
     ),
   ],
   ins3: [
+    resource("Business Consulting", "/consulting"),
+    resource("Talent & Search", "/capabilities"),
+    service("Workforce Solutions", "workforce-solutions"),
+    service("Background Verification", "background-verification"),
+    service("HR Advisory", "hr-advisory"),
     resource("GCC talent support", "/gcc"),
     service("RPO", "recruitment-process-outsourcing"),
     service("Executive Search", "executive-search"),
+  ],
+  "workforce-models": [
+    resource("Talent & Search", "/capabilities"),
+    service("Full workforce-model comparison", "workforce-solutions"),
+  ],
+  "skills-intelligence": [
+    service("Workforce planning", "workforce-solutions"),
+    service("HR and development priorities", "hr-advisory"),
+    service("Capability Building", "training"),
+  ],
+  "connected-gcc-capability": [
+    resource("Talent & Search", "/capabilities"),
+    resource(
+      "Plan the hiring sequence",
+      "/insights/planning-a-gcc-hiring-roadmap",
+    ),
+  ],
+  "hr-starting-point": [
+    resource("Core Business Consulting", "/consulting"),
+    service("Focused HR Solutions", "hr-solutions"),
+  ],
+  "connected-capability": [
+    service("HR Advisory", "hr-advisory"),
+    service("Capability Building", "training"),
+  ],
+  "workforce-planning": [
+    resource("Talent & Search", "/capabilities"),
+    service("HR Advisory", "hr-advisory"),
+  ],
+  "verification-brief": [
+    resource("Prepare a business conversation", "/employers"),
+    resource(
+      "Verification scope perspective",
+      "/insights/scoping-background-verification",
+    ),
+  ],
+  "hr-engagement": [
+    resource(
+      "Fractional HR perspective",
+      "/insights/when-fractional-hr-leadership-fits",
+    ),
   ],
   perm1: [
     resource("Technology hiring context", "/expertise/technology"),

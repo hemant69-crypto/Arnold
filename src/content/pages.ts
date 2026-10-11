@@ -1,6 +1,7 @@
 import { expandSections } from "./enhancements";
 import type { Section } from "./types";
 import { consultingPage } from "./consulting";
+import { capabilityThemes } from "./workforce";
 export type EditorialPage = {
   path: string;
   label: string;
@@ -122,7 +123,7 @@ const basePages: EditorialPage[] = [
     label: "For employers",
     title: "Start with the question your business needs to answer.",
     summary:
-      "Begin with business consulting or a defined delivery need. Connect your next stage of growth with the leadership, talent, workforce and capability required to make it happen.",
+      "Begin with business consulting or a defined delivery need: talent acquisition and executive search, workforce solutions, background verification or HR advisory. Connect your next stage with the people and support it requires.",
     cta: "Discuss a business priority",
     sections: [
       {
@@ -145,8 +146,18 @@ const basePages: EditorialPage[] = [
               "Permanent Staffing",
             ],
             ["Our hiring programme needs recruitment capacity", "RPO"],
-            ["We need capacity for a defined period", "Temporary Staffing"],
-            ["We need to scope a people issue", "HR Solutions"],
+            [
+              "We need capacity for a defined period or payroll support",
+              "Workforce Solutions",
+            ],
+            [
+              "We need agreed employment, education or reference checks",
+              "Background Verification",
+            ],
+            [
+              "We need HR foundations or part-time HR leadership",
+              "HR Advisory & Fractional HR Leadership",
+            ],
             ["We need to develop a specific capability", "Capability Building"],
           ],
         },
@@ -188,7 +199,7 @@ const basePages: EditorialPage[] = [
     label: "The Arnold Workforce Framework",
     title: "Understand. Design. Build. Scale.",
     summary:
-      "Connect business priorities with leadership, talent, workforce and capability. Four practical stages keep advice, execution and review aligned with the work ahead.",
+      "Connect business consulting with talent and search, workforce solutions, background verification and HR advisory. Four practical stages keep advice, execution and review aligned with the work ahead.",
     cta: "Discuss a business priority",
     image: "architecture-reflection.jpg",
     alt: "Illustrative architectural reflection",
@@ -230,10 +241,9 @@ const basePages: EditorialPage[] = [
   {
     path: "/about",
     label: "About Arnold",
-    title:
-      "Around 15 years of market experience. A forward-looking people focus.",
+    title: "15+ years of market experience. A forward-looking people focus.",
     summary:
-      "Rooted in Bengaluru and serving clients in the USA, Arnold connects business consulting with leadership, talent, workforce and capability-building delivery for the next stage of growth.",
+      "Rooted in Bengaluru and serving clients in the USA, Arnold connects core business consulting with talent acquisition and executive search, workforce solutions, background verification and HR advisory.",
     cta: "Start a conversation",
     image: "architecture-reflection.jpg",
     alt: "Architectural forms reflected in glass, used illustratively",
@@ -243,7 +253,7 @@ const basePages: EditorialPage[] = [
         title: "Start with the business, then define the support.",
         paragraphs: [
           "Business consulting is the starting conversation: understand the growth priority, clarify the people and workforce decisions, and build a practical roadmap. A specialist role may enable a new capability. A leadership appointment may shape the direction of a function. Recruitment capacity may support the next stage of growth.",
-          "Leadership, Talent, Workforce, Capability and GCC connect six delivery services: Permanent Staffing, Executive Search, Recruitment Process Outsourcing, HR Solutions, Temporary Staffing and capability building through Training. Choose the engagement around the requirement, with its scope and responsibilities agreed from the start.",
+          "Four service pillars connect that advice with delivery: Talent Acquisition & Executive Search, Workforce Solutions, Background Verification, and HR Advisory & Fractional HR Leadership. Specialist recruitment, leadership search, RPO and Capability Building add depth to the offer. Choose the engagement around the requirement, with its scope and responsibilities agreed from the start.",
         ],
       },
       {
@@ -356,5 +366,19 @@ const basePages: EditorialPage[] = [
 
 export const pages: EditorialPage[] = basePages.map((page) => ({
   ...page,
-  sections: expandSections(page.path, page.sections),
+  sections: [
+    ...expandSections(page.path, page.sections),
+    ...(page.path === "/gcc"
+      ? [
+          {
+            id: "connected-gcc-capability",
+            title: "Connect the centre's mandate with the delivery.",
+            paragraphs: [
+              capabilityThemes[4].copy,
+              "Scale a GCC team — Clarify the centre's business mandate, leadership responsibilities and critical skills. Build a hiring-wave roadmap, then connect Executive Search, specialist Permanent Staffing and RPO with the next milestone.",
+            ],
+          },
+        ]
+      : []),
+  ],
 }));

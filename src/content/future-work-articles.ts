@@ -3,7 +3,7 @@ import type { Article } from "./types";
 export const futureWorkArticles: Article[] = [
   {
     slug: "building-human-capability-for-ai-enabled-work",
-    topic: "AI & Work",
+    topic: "HR Advisory / AI & Work",
     title: "An AI-ready workforce starts with the work, not the tool.",
     summary:
       "AI changes tasks, judgement and team responsibilities. A practical workforce response connects leadership, critical talent, learning and the decisions people still need to own.",
@@ -61,7 +61,7 @@ export const futureWorkArticles: Article[] = [
   },
   {
     slug: "mapping-critical-skills-before-you-hire",
-    topic: "Talent & Skills",
+    topic: "Talent & Search / Skills",
     title: "Before you hire, map the capability your business needs.",
     summary:
       "Skills intelligence connects business priorities with evidence about work, people and the talent market. Use it to make a clearer choice between hiring, development and internal mobility.",

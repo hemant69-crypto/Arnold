@@ -15,7 +15,10 @@ import { Families, InsightTeasers } from "./Home";
 import { LinkButton } from "./LinkButton";
 import { ContactForm } from "./ContactForm";
 import { SectionVideo } from "./SectionVideo";
-import { homeWorkforceSections } from "@/content/workforce";
+import { talentScenes, talentSections } from "@/content/talent-search";
+import { pillarScenes } from "@/content/pillars";
+import { FounderProfile } from "./FounderProfile";
+import { PillarIntro } from "./PillarIntro";
 export function Editorial({ page }: { page: EditorialPage }) {
   return (
     <>
@@ -72,6 +75,7 @@ export function Editorial({ page }: { page: EditorialPage }) {
           </nav>
         ) : null}
       </ReadingSequence>
+      {page.path === "/about" ? <FounderProfile /> : null}
       {page.cta ? <Conversation interest={page.interest} /> : null}
     </>
   );
@@ -85,18 +89,54 @@ export function Capabilities({
 }) {
   return (
     <>
-      <PageIntro
+      <PillarIntro
+        variant="talent"
         label="Our capabilities"
-        title="From business priority to people capability."
-        summary="Business consulting sets the direction. Leadership, Talent, Workforce, Capability and GCC connect six delivery services with the priorities and practical plan that follow."
-        cta="Explore business consulting"
-        href="/consulting"
+        title="Talent Acquisition & Executive Search."
+        summary="Business consulting sets the direction. Permanent recruitment, technology and non-technology hiring, leadership and CXO search, specialist appointments and RPO connect that priority with the people who can take it forward."
+        cta="Discuss talent priorities"
+        href="/contact?interest=talent-search"
       />
       <section className="section">
-        <Families available={available} paths={paths} />
+        <div className="capability-head">
+          <div>
+            <p className="section-label">For business and talent leaders</p>
+            <h2>The mandate shapes the search.</h2>
+          </div>
+          <LinkButton href="/consulting" quiet>
+            Explore business consulting
+          </LinkButton>
+        </div>
+        <Families available={available} paths={paths} data={talentScenes} />
       </section>
-      <ContentChapters sections={enhancementSections["/capabilities"]} />
-      <ContentChapters sections={homeWorkforceSections.slice(0, 2)} />
+      <ContentChapters sections={talentSections.slice(0, 3)} />
+      <SectionVideo
+        asset="talentInterview"
+        label="Beyond the role description"
+        title="A conversation about contribution."
+        summary="Understand the work, the person and what the appointment needs to make possible."
+        cinematic
+      />
+      <ContentChapters sections={talentSections.slice(3)} />
+      <section
+        className="section light connected-pillars"
+        id="connected-capabilities"
+      >
+        <div className="capability-head">
+          <div>
+            <p className="section-label">Connected Arnold capabilities</p>
+            <h2>The right support around the appointment.</h2>
+          </div>
+          <LinkButton href="/gcc" quiet>
+            Explore GCC capability
+          </LinkButton>
+        </div>
+        <Families
+          available={available}
+          paths={paths}
+          data={pillarScenes.slice(1)}
+        />
+      </section>
       <section className="section light context">
         <p className="section-label">Choosing the right starting point</p>
         <div>
@@ -121,7 +161,7 @@ export function Capabilities({
           </div>
         </div>
       </section>
-      <Conversation />
+      <Conversation interest="talent-search" />
     </>
   );
 }
@@ -190,7 +230,7 @@ export function Insights({ articles }: { articles: Article[] }) {
       <PageIntro
         label="Arnold Insights"
         title="Perspectives on what comes next."
-        summary="Leadership. Workforce. AI & Work. GCC. Talent & Skills. Practical thinking for business leaders and professionals making decisions about the next stage."
+        summary="Practical perspectives on talent acquisition and executive search, workforce solutions, background verification and HR advisory. Leadership, GCC, skills and AI give those decisions their business context."
       />
       <ContentChapters
         sections={enhancementSections["/insights"].slice(0, 1)}
@@ -223,8 +263,8 @@ export function Contact({
           <p>
             Share what you want the business to achieve, what is getting in the
             way and which decisions need attention. You can begin with business
-            consulting or bring a defined leadership, talent, GCC or workforce
-            requirement.
+            consulting or bring a defined talent and search, workforce,
+            verification, HR advisory or GCC requirement.
           </p>
           <div className="notice">
             <h3>Looking for a role?</h3>
@@ -340,7 +380,7 @@ export function ThankYou({ accepted }: { accepted: boolean }) {
             ...section,
             title: "Useful routes while you wait.",
             paragraphs: [
-              "Explore Capabilities for the six services or Approach for the working relationship. If you arrived here while looking for a role, Opportunities keeps applications separate from business enquiries.",
+              "Explore Talent & Search and its connected service pillars, or Approach for the working relationship. If you arrived here while looking for a role, Opportunities keeps applications separate from business enquiries.",
             ],
           }
         : section,

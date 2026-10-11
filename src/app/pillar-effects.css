@@ -1,0 +1,362 @@
+/* Original variations of the site's luminous, black-backed atmosphere. */
+[data-scene] {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  --portrait-x: 0px;
+  --portrait-y: 0px;
+}
+.scene-atmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #000;
+}
+.scene-atmosphere::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 78% 46%, #4566ff3d 0%, transparent 37%),
+    radial-gradient(ellipse at 82% 72%, #d56d4f40, transparent 28%);
+}
+.scene-atmosphere::after {
+  content: "";
+  position: absolute;
+  width: 44%;
+  height: 70%;
+  left: 55%;
+  top: 10%;
+  border: 1px solid #b6c6ff40;
+  border-radius: 50%;
+  transform: rotate(-24deg);
+  box-shadow:
+    0 0 42px #5879ff25,
+    inset 0 0 48px #5879ff15;
+}
+[data-scene="workforce"] .scene-atmosphere::after {
+  width: 65%;
+  height: 35%;
+  left: 44%;
+  top: 35%;
+  transform: rotate(-14deg);
+  border-radius: 50%;
+}
+[data-scene="verification"] .scene-atmosphere::before {
+  background: radial-gradient(ellipse at 74% 48%, #4566ff40, transparent 38%);
+}
+[data-scene="verification"] .scene-atmosphere::after {
+  box-shadow:
+    0 0 0 44px #b6c6ff09,
+    0 0 0 85px #b6c6ff05;
+}
+[data-scene="advisory"] .scene-atmosphere::before {
+  background:
+    radial-gradient(ellipse at 85% 38%, #c5728c35, transparent 36%),
+    radial-gradient(ellipse at 75% 65%, #6454f040, transparent 38%);
+}
+[data-scene="advisory"] .scene-atmosphere::after {
+  border-radius: 48% 70% 45% 32%;
+  transform: rotate(38deg);
+}
+.scene-atmosphere canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+[data-field-status="running"] .scene-atmosphere canvas {
+  opacity: 1;
+}
+[data-field-status="running"] .scene-atmosphere::after {
+  opacity: 0;
+}
+.scene-motion-control {
+  display: none;
+  position: absolute;
+  right: var(--gutter);
+  bottom: 24px;
+  z-index: 3;
+}
+[data-scene-enhanced="true"] .scene-motion-control {
+  display: block;
+}
+.scene-motion-control .motion-toggle {
+  position: static;
+  margin: 0;
+  padding: 9px 14px;
+  min-height: 44px;
+  background: #000b;
+  color: #d8dce5;
+}
+.pillar-experience .page-intro {
+  background: linear-gradient(90deg, #0006 0%, #0003 60%, transparent 100%);
+  min-height: 720px;
+  padding-bottom: 110px;
+}
+.pillar-experience .page-intro h1 {
+  max-width: 1040px;
+  font-size: clamp(58px, 7vw, 104px);
+  line-height: 1.04;
+}
+.pillar-experience .intro-bottom {
+  margin-top: 70px;
+  align-items: center;
+}
+.pillar-experience .intro-bottom > p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e4e7ed;
+}
+.service-workforce-solutions .service-hero-image,
+.service-background-verification .service-hero-image,
+.service-hr-advisory .service-hero-image {
+  height: clamp(300px, 33vw, 480px);
+}
+
+/* A portrait-led founder chapter, with a quieter halo than the service fields. */
+.founder-profile {
+  display: block;
+  border: 0;
+  background: #000;
+  color: #fff;
+  padding-top: 85px;
+  padding-bottom: 110px;
+}
+.founder-profile .scene-atmosphere {
+  z-index: 0;
+}
+.founder-profile .scene-atmosphere::before {
+  background:
+    radial-gradient(ellipse at 22% 49%, #476aff55, transparent 38%),
+    radial-gradient(ellipse at 35% 67%, #dd785733, transparent 35%);
+}
+.founder-profile .scene-atmosphere::after {
+  left: 7%;
+  top: 23%;
+  width: 36%;
+  height: 62%;
+  transform: rotate(-18deg);
+}
+.founder-heading,
+.founder-composition {
+  position: relative;
+  z-index: 1;
+}
+.founder-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 32px;
+  margin-bottom: 52px;
+  border-bottom: 1px solid #ffffff30;
+}
+.founder-heading .section-label {
+  color: #c8ccd6;
+  margin: 5px 0 0;
+}
+.founder-intention {
+  margin: 0;
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.35;
+  letter-spacing: -0.04em;
+}
+.founder-composition {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(52px, 7vw, 108px);
+  align-items: start;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+.founder-visual {
+  position: relative;
+  max-width: 380px;
+  margin: 18px 0 0 22px;
+  padding-bottom: 12px;
+}
+.founder-visual::before {
+  content: "";
+  position: absolute;
+  inset: -20px 26px 42px -22px;
+  border: 1px solid #b6c6ff50;
+  border-radius: 4px 74px 4px 4px;
+  pointer-events: none;
+}
+.founder-portrait {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
+  background: #a7abb3;
+  border-radius: 4px 74px 4px 4px;
+  transform: translate(var(--portrait-x), var(--portrait-y));
+  box-shadow: 0 25px 65px #0005;
+}
+.founder-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 65%, #0008);
+}
+.founder-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.founder-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 280px;
+  margin: 20px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #c1c7d4;
+}
+.founder-location::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #bccbff;
+  box-shadow: 0 0 14px #758dff88;
+}
+.founder-copy {
+  max-width: 590px;
+  padding-top: 12px;
+}
+.founder-copy h2 {
+  font-size: clamp(42px, 4.6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+  margin-bottom: 22px;
+}
+.founder-copy h2 span {
+  display: block;
+}
+.founder-copy .founder-role {
+  font-size: 15px;
+  font-weight: 500;
+  color: #f5c6b6;
+  line-height: 1.6;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid #ffffff25;
+}
+.founder-copy p:not(.founder-role) {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #d0d5df;
+  margin-bottom: 20px;
+}
+.founder-copy p.founder-lead {
+  font-size: clamp(18px, 1.55vw, 22px);
+  line-height: 1.6;
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+}
+.founder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 48px;
+  padding: 10px 20px;
+  margin-top: 12px;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #b2bbce80;
+  border-radius: 40px;
+  transition: background-color 180ms ease;
+}
+.founder-link:hover {
+  background: #ffffff12;
+}
+.founder-link > span[aria-hidden] {
+  font-size: 23px;
+}
+@media (max-width: 1023px) {
+  .pillar-experience .page-intro {
+    min-height: 650px;
+  }
+  .founder-composition {
+    gap: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .pillar-experience .page-intro {
+    min-height: 0;
+    padding-top: 175px;
+    padding-bottom: 85px;
+    background: linear-gradient(90deg, #000c, #0004);
+  }
+  .pillar-experience .page-intro h1 {
+    font-size: clamp(40px, 9.5vw, 68px);
+    line-height: 1.08;
+  }
+  .pillar-experience .intro-bottom {
+    margin-top: 32px;
+  }
+  .pillar-experience .intro-bottom > p {
+    font-size: 15px;
+  }
+  .scene-atmosphere::after {
+    left: 28%;
+    width: 90%;
+    height: 52%;
+    top: 20%;
+  }
+  .scene-motion-control {
+    bottom: 18px;
+  }
+  .founder-profile {
+    padding-top: 55px;
+    padding-bottom: 90px;
+  }
+  .founder-heading {
+    display: block;
+    margin-bottom: 38px;
+  }
+  .founder-heading .section-label {
+    margin: 0 0 20px;
+  }
+  .founder-intention {
+    font-size: 27px;
+  }
+  .founder-composition {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+  .founder-visual {
+    max-width: 330px;
+    margin: 16px 0 0 16px;
+  }
+  .founder-visual::before {
+    inset: -16px 16px 43px -16px;
+  }
+  .founder-portrait {
+    border-top-right-radius: 80px;
+  }
+  .founder-copy h2 {
+    font-size: clamp(38px, 10.4vw, 62px);
+  }
+  .founder-copy .founder-role {
+    font-size: 14px;
+  }
+  .founder-profile .scene-atmosphere::after {
+    width: 120%;
+    left: -18%;
+    top: 8%;
+    height: 40%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .founder-portrait {
+    transform: none;
+  }
+}

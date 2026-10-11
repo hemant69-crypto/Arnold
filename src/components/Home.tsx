@@ -13,15 +13,18 @@ import {
   workforceFramework,
 } from "@/content/workforce";
 import { ContentChapters } from "./ContentChapter";
+import { pillarScenes } from "@/content/pillars";
 export const familyData = capabilityThemes;
 export function Families({
   available,
   paths,
   scenes = false,
+  data = familyData,
 }: {
   available: string[];
   paths: string[];
   scenes?: boolean;
+  data?: typeof familyData;
 }) {
   const canLink = (href: string) => {
     const path = href.split("#")[0];
@@ -31,7 +34,7 @@ export function Families({
   };
   return (
     <div className={scenes ? "capability-scenes" : "families"}>
-      {familyData
+      {data
         .filter((f) => f.links.some(([, href]) => canLink(href)))
         .map((f, index) => (
           <article
@@ -127,8 +130,9 @@ export function Home({
           <div className="hero-lower">
             <p>
               Business consulting for your next stage of growth. We help
-              organizations build the leadership, talent, skills and workforce
-              capability required to turn business priorities into results.
+              organisations turn people priorities into a practical plan,
+              connected to talent acquisition and executive search, workforce
+              solutions, background verification and HR advisory.
             </p>
             <div className="hero-actions">
               <LinkButton href="/contact?interest=consulting">
@@ -140,18 +144,14 @@ export function Home({
             </div>
           </div>
           <div className="hero-bottom">
-            <span>
-              Around 15 years of
-              <br />
-              market experience.
-            </span>
             <a href="#perspective">Scroll to explore ↓</a>
           </div>
           <MotionControl />
         </section>
         <section className="section context signature-context" id="perspective">
-          <p className="section-label">
-            Business consulting, connected to delivery
+          <p className="section-label experience-label">
+            <span className="experience-number">15+</span>{" "}
+            <span>years of market experience.</span>
           </p>
           <div>
             <h2>
@@ -169,8 +169,10 @@ export function Home({
               <p>
                 We start with those business questions. Clarify priorities,
                 compare the routes available and build a practical plan. Then
-                connect the advice with leadership search, talent, workforce
-                models, capability building and GCC teams.
+                connect the advice with talent acquisition and executive search,
+                workforce solutions, background verification and HR leadership.
+                Technology, GCC teams and capability building give that delivery
+                its business context.
               </p>
             </div>
           </div>
@@ -181,16 +183,21 @@ export function Home({
             <div>
               <p className="section-label">From consulting to execution</p>
               <h2>
-                From business priority
+                Four service pillars.
                 <br />
-                to people capability.
+                Connected to your priorities.
               </h2>
             </div>
             <LinkButton href="/capabilities" quiet>
-              Find your starting point
+              Explore Talent & Search
             </LinkButton>
           </div>
-          <Families available={available} paths={paths} scenes />
+          <Families
+            available={available}
+            paths={paths}
+            scenes
+            data={pillarScenes}
+          />
         </section>
       </SignatureExperience>
       {paths.includes("/gcc") && (
@@ -210,7 +217,6 @@ export function Home({
             </div>
             <figcaption>
               <span>Bengaluru, India</span>
-              <span>Illustrative cityscape</span>
             </figcaption>
           </figure>
           <div className="gcc-feature-copy">

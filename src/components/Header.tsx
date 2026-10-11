@@ -3,38 +3,8 @@ import { SiteLink as Link } from "./SiteLink";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { company } from "@/content/company";
-const groups = [
-  [
-    ["Home", "/"],
-    ["Consulting", "/consulting"],
-    ["Capabilities", "/capabilities"],
-  ],
-  [
-    ["GCC", "/gcc"],
-    ["Approach", "/approach"],
-    ["About", "/about"],
-  ],
-  [
-    ["Insights", "/insights"],
-    ["Contact", "/contact"],
-    ["Opportunities", "/opportunities"],
-  ],
-];
-const services = [
-  ["Permanent Staffing", "permanent-staffing"],
-  ["Executive Search", "executive-search"],
-  ["Recruitment Process Outsourcing", "recruitment-process-outsourcing"],
-  ["HR Solutions", "hr-solutions"],
-  ["Temporary Staffing", "temporary-staffing"],
-  ["Capability Building", "training"],
-];
-export function Header({
-  available,
-  paths,
-}: {
-  available: string[];
-  paths: string[];
-}) {
+import { headerGroups } from "@/content/pillars";
+export function Header({ paths }: { available: string[]; paths: string[] }) {
   const pathname = usePathname();
   const details = useRef<HTMLDetailsElement>(null);
   const trigger = useRef<HTMLElement>(null);
@@ -202,7 +172,7 @@ export function Header({
         arnold <span>consulting</span>
       </Link>
       <nav className="nav-groups" aria-label="Primary" data-menu-background>
-        {groups.map((group, i) => (
+        {headerGroups.map((group, i) => (
           <div key={i}>
             {group
               .filter(([, href]) => paths.includes(href))
@@ -263,10 +233,24 @@ export function Header({
                 {[
                   ["Home", "/"],
                   ["Consulting", "/consulting"],
-                  ["Capabilities", "/capabilities"],
-                  ["GCC & Enterprise Capability", "/gcc"],
                   ["Expertise", "/expertise"],
                   ["For employers", "/employers"],
+                ]
+                  .filter(([, href]) => paths.includes(href))
+                  .map(([label, href]) => (
+                    <div key={href}>{navLink(label, href)}</div>
+                  ))}
+              </div>
+              <div>
+                {[
+                  ["Talent & Search", "/capabilities"],
+                  ["Workforce Solutions", "/capabilities/workforce-solutions"],
+                  [
+                    "Background Verification",
+                    "/capabilities/background-verification",
+                  ],
+                  ["HR Advisory", "/capabilities/hr-advisory"],
+                  ["GCC & Enterprise Capability", "/gcc"],
                 ]
                   .filter(([, href]) => paths.includes(href))
                   .map(([label, href]) => (
@@ -286,15 +270,6 @@ export function Header({
                     <div key={href}>{navLink(label, href)}</div>
                   ))}
               </div>
-            </nav>
-            <nav className="menu-services" aria-label="Services">
-              {services
-                .filter(([, slug]) => available.includes(slug))
-                .map(([label, slug]) => (
-                  <span key={slug}>
-                    {navLink(label, `/capabilities/${slug}`)}
-                  </span>
-                ))}
             </nav>
             <div className="menu-bottom">
               Rooted in India. Working with the USA.

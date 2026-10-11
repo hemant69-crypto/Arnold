@@ -5,6 +5,8 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 import "./motion.css";
 import "./content-enhancement.css";
+import "./four-pillars.css";
+import "./pillar-effects.css";
 import { company } from "@/content/company";
 import { publicReleaseEnabled, productionOrigin } from "@/lib/site-config";
 import { contentPaths, getContent } from "@/lib/content";

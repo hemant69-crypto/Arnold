@@ -1,6 +1,10 @@
 export const interests = [
   ["not-sure", "Not sure yet"],
   ["consulting", "Business Consulting"],
+  ["talent-search", "Talent Acquisition & Executive Search"],
+  ["workforce-solutions", "Workforce Solutions"],
+  ["background-verification", "Background Verification"],
+  ["hr-advisory", "HR Advisory & Fractional HR Leadership"],
   ["permanent-staffing", "Permanent Staffing"],
   ["executive-search", "Executive Search"],
   ["recruitment-process-outsourcing", "Recruitment Process Outsourcing"],

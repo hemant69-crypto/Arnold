@@ -1,8 +1,12 @@
 # Arnold Consulting — Phase 1 website
 
+**Latest annotation polish and deployment, 11 October:** The founder/experience compositions and simple expanded menu are refined. The service group is Talent & Search → Workforce Solutions → Background Verification → HR Advisory → GCC, including mobile. Header gaps are 10% wider, menu bottom links align, visible media captions are removed and all four pillar introductions now have the Home/Consulting circular pointer behavior. Final local build: `752917ce-e545-4ca5-b7a3-8682d62445bb`. [Current self-contained implementation and QA handoff](QA_HANDOFF.md) records verification and the authorised Arnold-only GitHub/Netlify update. Older build records below remain historical.
+
+**Four-pillar revision, 11 October 2026:** Consulting remains core. The Capabilities URL is Talent & Search; three new pillar pages, registered content transfers, eight Insights, the annotated navigation/experience changes and a LinkedIn-sourced founder module were implemented locally. Talent and the three new pages have original atmosphere variants and relevant small stock-video interludes; the founder chapter has a portrait halo and pointer response. Build `8c07b5f5-7f8f-473a-81a6-b77c03c6fe4d` passed all 59 browser/10 backend checks, with 97–98 mobile performance medians across 18 lab runs. The later annotation polish and authorised deployment are documented above and in the self-contained QA handoff.
+
 **Latest content refinement, 8 October 2026:** Business consulting is the lead proposition, with GCC, leadership, talent, workforce and capability-building delivery underneath. The homepage links directly to Consulting, its business situations/outputs are more concrete, and three connected buyer journeys appear on Capabilities. Existing design and ATS state are preserved. [The current buyer review and QA handoff](../docs/ENTERPRISE_BUYER_REVIEW.md) records build `46f455a6-be2f-4b3e-a377-63611a3cbdd0`, all 47 browser checks and the new four-page founder-ambition report. Earlier reports retain their build-specific evidence.
 
-Complete local implementation: 27 routes and a real 404, six services, five original perspectives, pointer-responsive opening, Hindi hero lens, animated top navigation and selected cinematic sections. Hindi is limited to the homepage hero and its headline preview; all other content stays English. Content is a reviewable draft, not approval of company claims. Public release and account-dependent integrations remain gated.
+Complete local implementation: 33 routes and a real 404, four service pillars with six retained detail routes, eight original perspectives, pointer-responsive opening, Hindi hero lens, animated top navigation and selected cinematic sections. Hindi is limited to the homepage hero and its headline preview; all other content stays English. Content is a reviewable draft, not approval of company claims. Public release and account-dependent integrations remain gated.
 
 The content enhancement adds 69 chapters across 23 inner routes, practical service FAQs, contextual reading links, verified company LinkedIn placements and a compact “Trusted by clients” homepage strip. The finished Consulting page is preserved. ATS remains pending. See [the content enhancement handoff](../docs/CONTENT_ENHANCEMENT_QA.md) for the latest combined verification and source/rights records.
 
@@ -30,19 +34,22 @@ See [Netlify setup](NETLIFY.md). The repository root is this application. `netli
 
 ## Edit the experience
 
-- `src/content/services.ts`: six distinct service narratives, FAQs, responsibility tables and related services.
+- `src/content/services.ts` and `pillar-services.ts`: six detailed service narratives and three main pillar pages, FAQs, responsibility tables and related services.
 - `src/content/pages.ts`: GCC, expertise, Employers, Approach and About; registers the Consulting page.
 - `src/content/consulting.ts`: the complete Consulting narrative, stable section IDs and six advisory/service mappings.
 - `src/components/Consulting.tsx`, `ConsultingMotion.tsx`, `src/app/consulting.css`: Consulting composition and responsive reading layouts; deferred effects are in `src/lib/motion/consulting-scenes.ts`.
 - `src/content/workforce.ts`: five theme definitions, homepage workforce/intelligence/Advantage/outcome copy and the four-stage framework.
 - `src/content/future-work-articles.ts`: two substantive original AI & Work / Talent & Skills perspectives.
-- `src/content/articles.ts`: five original perspective drafts; local new articles also need their route added to `src/content/routes.ts`.
+- `src/content/articles.ts` and `pillar-articles.ts`: eight original perspective drafts. The route registry derives local article paths from the collection.
 - `src/content/legal.ts`: truthful preview policies; replace with reviewed entity/provider/retention/contact details before live collection.
 - `src/content/enhancements/`: 69 additional chapters, stable insertion anchors, practical FAQs, contextual resources and presentation choices. The original service/editorial/article/legal collections retain their base sections and compose these additions through the existing content shapes. Reading time follows actual article content.
 - `src/components/ContentChapter.tsx`, `src/app/content-enhancement.css`: original examples, mobile comparison rows, real sequences, compact utility composition and server-rendered contextual links.
 - `src/content/company.ts`, `src/components/SocialLink.tsx`: one verified company LinkedIn destination and accessible external links; no social feed or tracking pixel.
 - `src/components/ClientStrip.tsx`, `ClientStripMotion.tsx`, `src/content/client-logos.ts`: compact homepage proof strip, ten source-derived marks and lightweight preference-aware motion. Source/rights records are in `../assets/client-logos/`; no mark was generated. A public-release build omits this evidence until `CLIENT_LOGOS_PUBLIC_APPROVED=true` is configured after the current relationship/rights review. Local review needs no configuration.
 - `src/components/Home.tsx`, `Header.tsx`, `Footer.tsx`: homepage sequence, capability families and navigation.
+- `src/content/pillars.ts`, `talent-search.ts`, `capability-transfers.ts`: shared pillar names/navigation and content preservation.
+- `src/components/FounderProfile.tsx`, `PillarIntro.tsx`, `SceneAtmosphere.tsx`, `src/lib/motion/pillar-field.ts`, `src/app/pillar-effects.css`: founder/pillar compositions, original deferred fields and static fallbacks.
+- `src/app/four-pillars.css`: four-column header, expanded navigation and the annotated experience label.
 - `src/components/SignatureExperience.tsx`, `HeroHeadline.tsx`, `SectionVideo.tsx`: small interaction shells, hero-only Hindi and visibility-controlled video.
 - `src/lib/graphics/`, `src/lib/motion/`: original GLSL/OGL field, pointer/lens lifecycle, scoped GSAP menu/scenes.
 - `src/app/globals.css`, `src/app/motion.css`: shared typography/layout and signature scene/menu/video styling.

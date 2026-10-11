@@ -1,5 +1,7 @@
 import { expandSections, additionalServiceFAQs } from "./enhancements";
 import type { Service } from "./types";
+import { pillarServices } from "./pillar-services";
+import { supportingTransfers } from "./capability-transfers";
 const baseServices: Service[] = [
   {
     slug: "permanent-staffing",
@@ -595,11 +597,16 @@ const baseServices: Service[] = [
     related: ["hr-solutions", "permanent-staffing"],
   },
 ];
-export const services: Service[] = baseServices.map((service) => ({
-  ...service,
-  sections: expandSections(`/capabilities/${service.slug}`, service.sections),
-  faqs: [...service.faqs, ...(additionalServiceFAQs[service.slug] ?? [])],
-}));
+export const services: Service[] = [...baseServices, ...pillarServices].map(
+  (service) => ({
+    ...service,
+    sections: [
+      ...expandSections(`/capabilities/${service.slug}`, service.sections),
+      ...(supportingTransfers[service.slug] ?? []),
+    ],
+    faqs: [...service.faqs, ...(additionalServiceFAQs[service.slug] ?? [])],
+  }),
+);
 export function serviceBySlug(slug: string) {
   return services.find((service) => service.slug === slug);
 }

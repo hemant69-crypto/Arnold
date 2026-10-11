@@ -94,7 +94,7 @@ for (const width of [1440, 390]) {
     const paths = await page
       .locator('#menu-panel a[href^="/"]')
       .evaluateAll((links) => links.map((a) => a.getAttribute("href")!));
-    expect(new Set(paths).size).toBe(19);
+    expect(new Set(paths).size).toBe(16);
     for (const path of paths) {
       await page.locator("footer").scrollIntoViewIfNeeded();
       expect(await page.evaluate(() => scrollY)).toBeGreaterThan(300);
@@ -148,9 +148,19 @@ test("content links, related pages and service-interest buttons arrive at the to
       "/expertise",
     );
   }
-  expect(visited.size).toBe(7);
+  expect(visited.size).toBe(10);
   for (const interest of ["executive-search", "training", "hr-solutions"]) {
-    await menuLink(page, `/capabilities/${interest}`);
+    await menuLink(
+      page,
+      interest === "executive-search"
+        ? "/capabilities"
+        : "/capabilities/hr-advisory",
+    );
+    await follow(
+      page,
+      page.locator(`main a[href="/capabilities/${interest}"]`).first(),
+      `/capabilities/${interest}`,
+    );
     await follow(
       page,
       page.locator(`.page-intro a[href="/contact?interest=${interest}"]`),
@@ -238,13 +248,15 @@ test("expanded menu includes its close control and reflows accessibly at four br
       )
       .toBe(0);
     const menuLayout = await page.locator("#menu-panel").evaluate((panel) => ({
-      columns: getComputedStyle(panel).gridTemplateColumns.split(/\s+/).length,
+      columns: getComputedStyle(
+        panel.querySelector(".expanded-nav")!,
+      ).gridTemplateColumns.split(/\s+/).length,
       navigationWidth: panel
         .querySelector(".expanded-nav")!
         .getBoundingClientRect().width,
     }));
     expect(menuLayout.columns, `menu grid at ${width}px`).toBe(
-      width < 768 ? 1 : width < 1024 ? 2 : 3,
+      width < 768 ? 1 : 3,
     );
     expect(menuLayout.navigationWidth).toBeGreaterThan(200);
     const result = await new AxeBuilder({ page })
@@ -314,7 +326,7 @@ test("short-screen menu keeps keyboard focus visible and reopens at its beginnin
   await page.screenshot({ path: "output/playwright/menu-landscape.png" });
 });
 
-test("all 27 pages retain header separation, responsive reflow and intact images", async ({
+test("all 33 pages retain header separation, responsive reflow and intact images", async ({
   page,
 }) => {
   test.setTimeout(120000);
@@ -346,7 +358,7 @@ test("all 27 pages retain header separation, responsive reflow and intact images
         `${path}: heading clears header at ${width}px`,
       ).toBeGreaterThan(20);
       expect(layout.brandVisible).toBe(true);
-      if (width >= 768) {
+      if (width >= 1024) {
         expect(
           layout.navBrandGap,
           `${path}: logo/nav separation`,

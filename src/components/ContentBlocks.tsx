@@ -3,33 +3,12 @@ import { SiteLink as Link } from "./SiteLink";
 import type { Section, Service } from "@/content/types";
 import type { ReactNode } from "react";
 import { Conversation } from "./Footer";
-import { LinkButton } from "./LinkButton";
+import { PageIntro } from "./PageIntro";
+export { PageIntro } from "./PageIntro";
 import { SectionVideo } from "./SectionVideo";
 import { ContentChapter } from "./ContentChapter";
-export function PageIntro({
-  label,
-  title,
-  summary,
-  cta,
-  href = "/contact",
-}: {
-  label: string;
-  title: string;
-  summary: string;
-  cta?: string;
-  href?: string;
-}) {
-  return (
-    <section className="page-intro">
-      <p className="section-label">{label}</p>
-      <h1>{title}</h1>
-      <div className="intro-bottom">
-        <p>{summary}</p>
-        {cta ? <LinkButton href={href}>{cta}</LinkButton> : null}
-      </div>
-    </section>
-  );
-}
+import { pillars } from "@/content/pillars";
+import { PillarIntro } from "./PillarIntro";
 export function ProseSections({ sections }: { sections: Section[] }) {
   return (
     <>
@@ -101,9 +80,43 @@ export function ServicePage({
   service: Service;
   available: string[];
 }) {
+  const presentations = {
+    "workforce-solutions": {
+      variant: "workforce" as const,
+      after: "contract-to-hire",
+      asset: "workforceTeam" as const,
+      label: "People around a shared purpose",
+      title: "Capacity, connected to the work.",
+      summary:
+        "The right skills, a clear assignment and an arrangement that supports your next business milestone.",
+    },
+    "background-verification": {
+      variant: "verification" as const,
+      after: "verification-consent",
+      asset: "verificationReview" as const,
+      label: "A considered review",
+      title: "Clarity before the next decision.",
+      summary:
+        "Agreed checks. Appropriate consent. A clear account of what has been confirmed and what still needs attention.",
+    },
+    "hr-advisory": {
+      variant: "advisory" as const,
+      after: "fractional-leadership",
+      asset: "advisoryMeeting" as const,
+      label: "Experience at the table",
+      title: "People leadership for your next stage.",
+      summary:
+        "Bring the business priority into the room. Build the HR direction, practical processes and leadership support around it.",
+    },
+  };
+  const pillar = presentations[service.slug as keyof typeof presentations];
+  const Intro = pillar ? PillarIntro : PageIntro;
   return (
     <div className={`service-page service-${service.variant ?? service.slug}`}>
-      <PageIntro
+      <Intro
+        {...(pillar
+          ? { variant: pillar.variant }
+          : { variant: "talent" as const })}
         label={service.name}
         title={service.headline}
         summary={service.summary}
@@ -124,9 +137,18 @@ export function ServicePage({
       ) : null}
       <ReadingSequence
         sections={service.sections}
-        interludeAfter={service.slug === "training" ? "scope" : undefined}
+        interludeAfter={
+          pillar?.after ?? (service.slug === "training" ? "scope" : undefined)
+        }
         interlude={
-          service.slug === "training" ? (
+          pillar ? (
+            <SectionVideo
+              asset={pillar.asset}
+              label={pillar.label}
+              title={pillar.title}
+              summary={pillar.summary}
+            />
+          ) : service.slug === "training" ? (
             <SectionVideo
               asset="workshop"
               label="Learning with a purpose"
@@ -146,15 +168,19 @@ export function ServicePage({
           ))}
         </section>
         <nav className="related-links" aria-label="Related capabilities">
-          <Link href="/capabilities">All capabilities</Link>
+          <Link href="/capabilities">Talent &amp; Search</Link>
+          <Link href="/consulting">Business Consulting</Link>
           {service.related
             .filter((slug) => available.includes(slug))
             .map((slug) => (
               <Link href={`/capabilities/${slug}`} key={slug}>
-                {slug
-                  .split("-")
-                  .map((w) => w[0].toUpperCase() + w.slice(1))
-                  .join(" ")}
+                {pillars.find((p) => p.interest === slug)?.name ??
+                  (slug === "training"
+                    ? "Capability Building"
+                    : slug
+                        .split("-")
+                        .map((w) => w[0].toUpperCase() + w.slice(1))
+                        .join(" "))}
               </Link>
             ))}
         </nav>

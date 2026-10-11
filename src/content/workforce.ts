@@ -132,8 +132,8 @@ export const homeWorkforceSections: Section[] = [
     id: "arnold-advantage",
     title: "The Arnold Advantage.",
     paragraphs: [
-      "Around 15 years of market experience, with roots in Bengaluru and work for clients in the USA. A connected portfolio brings leadership search, specialist recruitment, RPO, flexible workforce, HR Solutions and capability building into the same business conversation.",
-      "Business consulting comes first: clarify the priority, compare the choices and agree a practical roadmap. We advise. We build. We deliver. We scale. Leadership, talent, workforce, capability building and GCC services connect that advice with execution.",
+      "15+ years of market experience, with roots in Bengaluru and work for clients in the USA. A connected portfolio brings Talent Acquisition & Executive Search, Workforce Solutions, Background Verification and HR Advisory into the same business conversation, with capability building supporting defined development needs.",
+      "Business consulting comes first: clarify the priority, compare the choices and agree a practical roadmap. We advise. We build. We deliver. We scale. Four service pillars connect that advice with execution, including leadership, specialist talent and workforce support for GCC teams.",
     ],
     bullets: [
       "Human expertise + technology: Keep human judgement accountable while using the agreed recruitment systems and relevant information.",

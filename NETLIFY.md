@@ -24,7 +24,7 @@ npm run start -- --port 3001
 npm run qa:browser
 ```
 
-The local Netlify simulator was also attempted: its unlinked Blobs cache rerendered static HTML instead of serving the deploy-seeded output, and its response bridge mislabelled decoded bodies as gzip. Those simulator responses do not establish hosted behaviour. The generated deploy blobs preserve all 25 HTML pages and their matching CSP hashes; perform the hosted smoke check after deployment.
+The local Netlify simulator was also attempted: its unlinked Blobs cache rerendered static HTML instead of serving the deploy-seeded output, and its response bridge mislabelled decoded bodies as gzip. Those simulator responses do not establish hosted behaviour. The generated deploy blobs preserve all 33 immutable HTML routes and their matching CSP hashes; perform the hosted smoke check after deployment.
 
 `.netlify/`, `.next/`, local output and real environment values stay outside Git. Final public release, business/legal/rights review, real integrations, hostname metadata and host-specific enquiry proxy trust will be configured separately.
 

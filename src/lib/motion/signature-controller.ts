@@ -6,6 +6,7 @@ import {
   readVisitPreference,
   subscribeVisitPreference,
 } from "../visit-preference";
+import { allowsPointerLens, pointerLensRadius } from "./pointer-lens";
 
 export function mountSignature(zone: HTMLElement, canvas: HTMLCanvasElement) {
   const renderer = createAtmosphere(canvas);
@@ -67,7 +68,7 @@ export function mountSignature(zone: HTMLElement, canvas: HTMLCanvasElement) {
   const resize = () => {
     measure();
     renderer.resize(box.width, box.height, quality);
-    input.radius = Math.min(145, Math.max(100, box.width * 0.092));
+    input.radius = pointerLensRadius(box.width);
     positions = markers.map((el) => ({
       top: el.getBoundingClientRect().top + scrollY,
       scene: Number(el.dataset.motionScene),
@@ -174,12 +175,6 @@ export function mountSignature(zone: HTMLElement, canvas: HTMLCanvasElement) {
   };
   const move = (event: PointerEvent) => {
     if (event.pointerType === "touch") return;
-    const blocked =
-      event.target instanceof Element &&
-      !!event.target.closest(
-        "a, button, input, textarea, select, summary, [data-no-lens]",
-      );
-    const selected = !!window.getSelection()?.toString();
     const dt = Math.max(
       0.016,
       Math.min(0.1, (event.timeStamp - previousTime) / 1000),
@@ -200,7 +195,7 @@ export function mountSignature(zone: HTMLElement, canvas: HTMLCanvasElement) {
     targetX = previousX = event.clientX;
     targetY = previousY = event.clientY;
     previousTime = event.timeStamp;
-    wantLens = !blocked && !selected;
+    wantLens = allowsPointerLens(event);
   };
   const leave = () => {
     wantLens = false;

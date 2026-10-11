@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import { allRoutes } from "../../src/content/routes";
-test("all 27 direct routes, metadata, internal links, no script policy errors and real 404", async ({
+test("all 33 direct routes, metadata, internal links, no script policy errors and real 404", async ({
   page,
   request,
 }) => {
@@ -17,7 +17,7 @@ test("all 27 direct routes, metadata, internal links, no script policy errors an
     )
       failures.push(msg.text());
   });
-  expect(allRoutes).toHaveLength(27);
+  expect(allRoutes).toHaveLength(33);
   for (const path of allRoutes) {
     const response = await page.goto(path);
     expect(response?.status(), path).toBe(200);
@@ -209,9 +209,9 @@ test("menu keyboard trap, escape, focus restoration, routing and background unlo
   await trigger.click();
   await page
     .locator("#menu-panel")
-    .getByRole("link", { name: "Executive Search", exact: true })
+    .getByRole("link", { name: "Talent & Search", exact: true })
     .click();
-  await expect(page).toHaveURL(/executive-search$/);
+  await expect(page).toHaveURL(/capabilities$/);
   await expect(page.locator(".menu")).not.toHaveAttribute("open", "");
   expect(
     await page.locator("body").evaluate((el) => el.style.overflow),
@@ -260,7 +260,10 @@ test("no JavaScript and reduced motion preserve content and disclosure navigatio
   await expect(page.locator("#menu-panel")).toBeVisible();
   await page
     .locator("#menu-panel")
-    .getByRole("link", { name: "Capabilities", exact: true })
+    .getByRole("link", {
+      name: "Talent & Search",
+      exact: true,
+    })
     .click();
   await expect(page).toHaveURL(/capabilities$/);
   await context.close();

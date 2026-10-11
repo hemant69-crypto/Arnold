@@ -219,7 +219,7 @@ export const pageEnhancements: Record<string, Section[]> = {
       title: "From a technology hiring base to connected talent capability.",
       paragraphs: [
         "Arnold’s story begins in Bengaluru, with technology talent and the relationships behind business growth. Founded in 2012, the company developed from a technology hiring base towards leadership, recruitment programmes and broader people requirements.",
-        "The current portfolio connects six services with the business situations behind them. Technology and GCC talent remain an important context, alongside leadership and selected business-function hiring needs.",
+        "The current portfolio connects four main service pillars with core business consulting: talent acquisition and executive search, workforce solutions, background verification and HR advisory. Technology and GCC talent remain an important context, alongside leadership and selected business-function hiring needs. Specialist recruitment, leadership search, RPO and Capability Building provide further depth.",
       ],
       bullets: [
         "2012: founding — An India-based business with Bengaluru as its starting context.",

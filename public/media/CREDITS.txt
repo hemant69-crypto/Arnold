@@ -59,3 +59,22 @@ The priority map, GCC sequence and consulting journey are original HTML/SVG comp
 Client strip, 7 October 2026:
 clients/*.webp — ten original marks extracted from the user-supplied Arnold Consulting + Apex Workforce Advisory.pdf, page 14, embedded image object 228. Source-era identities are retained; extraction bounds and SHA-256 provenance are recorded outside the public app in assets/client-logos/manifest.json. No logos were generated or redrawn. CSS supplies the monochrome display. Supplied relationship evidence supports the user-authorised local review; current relationship and public trademark-use permission review remains part of release. The strip is excluded from a public-release build unless CLIENT_LOGOS_PUBLIC_APPROVED=true.
 The new role briefs, hiring-wave roadmaps, responsibility maps and learning/application examples are original HTML content. Illustrative examples contain no real candidate data or invented client results.
+
+Four-pillar revision, 11 October 2026:
+cyril-nazareth-founder.webp — Cyril Nandan Nazareth's genuine LinkedIn profile photograph, https://www.linkedin.com/in/cyrilnandannazareth/, downloaded through the user's authorised signed-in session and edited at the user's request with built-in ChatGPT ImageGen. Facial identity was the preservation priority; business attire, background, lighting and framing are AI-refined. This is an edited portrait, not a newly photographed office scene. Original 600x600 reference, 1086x1448 generated master, exact prompt and SHA-256 provenance are preserved privately in assets/founder-profile/. This 900x1200 WebP is a display-optimised derivative.
+The Workforce Solutions, Background Verification and HR Advisory page narratives and three additional perspectives are original Arnold website copy. Existing Capabilities explanations and comparisons are retained or integrated at their registered destinations; no client outcomes or endorsements were invented.
+
+Pillar effects and films, 11 October 2026:
+pillar-field.ts and pillar-effects.css — original procedural contour fields and static CSS artwork created for Arnold. Talent uses an aperture; Workforce uses crossing streams; Verification uses nested rings; HR Advisory uses a rising fold; the founder section uses a portrait halo. No reference-site media or code is reproduced.
+talent-interview.mp4 / .jpg / -mobile.jpg / -mobile.webp — cottonbro studio
+https://www.pexels.com/video/people-doing-job-interview-5971452/
+workforce-team.mp4 / .jpg / -mobile.jpg / -mobile.webp — ArtHouse Studio
+https://www.pexels.com/video/people-having-a-meeting-in-the-office-7686623/
+verification-review.mp4 / .jpg / -mobile.jpg / -mobile.webp — Mikhail Nilov
+https://www.pexels.com/video/a-woman-checking-the-documents-9364264/
+advisory-meeting.mp4 / .jpg / -mobile.jpg / -mobile.webp — Kampus Production
+https://www.pexels.com/video/colleagues-having-a-meeting-8461009/
+License for all four: https://www.pexels.com/license/ (checked 11 October 2026).
+Muted 1280x720, 25fps H.264 derivatives with a 0.6-second crossfade: Talent 6 seconds, others 8.4 seconds. Original masters, source ranges, exact processing and integrity checks are preserved privately in assets/pillar-videos/. People, settings, sample documents and charts are illustrative, not Arnold people, candidate data or results.
+
+11 October annotation polish: the user requested removal of visible cityscape/film captions. Provenance, licences and source distinction remain in this credit file; supplied stock footage is not Arnold client or staffing evidence.

@@ -1,4 +1,5 @@
 import type { Section } from "../types";
+import { engagementRows } from "../capability-transfers";
 
 export const hubEnhancements: Record<string, Section[]> = {
   "/capabilities": [
@@ -26,44 +27,14 @@ export const hubEnhancements: Record<string, Section[]> = {
         "The services connect, but they answer different requirements. The comparison below helps distinguish the starting discussion and the decisions that remain with the client. Actual activities and outputs follow the agreed scope.",
       ],
       table: {
-        caption: "Six services, six useful starting conversations",
+        caption:
+          "Three hiring engagements, three useful starting conversations",
         headings: [
           "Service",
           "Starting situation",
           "Discussion and client contribution",
         ],
-        rows: [
-          [
-            "Permanent Staffing",
-            "An individual or group of continuing specialist roles.",
-            "Define contribution and criteria; the client supplies interview capacity and owns selection.",
-          ],
-          [
-            "Executive Search",
-            "A business-critical leadership appointment.",
-            "Agree the mandate and relevant market context; client stakeholders align on authority and the decision process.",
-          ],
-          [
-            "Recruitment Process Outsourcing",
-            "A defined hiring wave or ongoing recruitment demand.",
-            "Agree included activity, systems and review; the client retains explicitly named hiring decisions.",
-          ],
-          [
-            "Temporary Staffing",
-            "A time-bound or changing workforce requirement.",
-            "Clarify duration, supervision and responsibility; confirm the actual employment and payment arrangement.",
-          ],
-          [
-            "HR Solutions",
-            "A particular people question affecting the work.",
-            "Establish the issue, scope and useful next decision; identify the sponsor and required specialist involvement.",
-          ],
-          [
-            "Capability Building",
-            "A defined audience with a specific learning need.",
-            "Agree objective, available delivery scope and review; the client supplies context and application support.",
-          ],
-        ],
+        rows: engagementRows.slice(0, 3),
       },
     },
     {
@@ -139,16 +110,16 @@ export const hubEnhancements: Record<string, Section[]> = {
   "/insights": [
     {
       id: "ins1",
-      title: "Five perspectives on workforce capability.",
+      title: "Four service pillars. Practical perspectives.",
       paragraphs: [
-        "Arnold Insights connects forward-looking questions with practical decisions. Explore original perspectives across five editorial pillars, with skills running through the whole workforce agenda. Articles are available to read without a subscription.",
+        "Arnold Insights connects forward-looking questions with practical decisions across Talent Acquisition & Executive Search, Workforce Solutions, Background Verification and HR Advisory & Fractional HR Leadership. Articles are available to read without a subscription.",
+        "Leadership, GCC, technology, skills and AI remain useful subjects within that service context. Explore the business mandate, workforce planning, productivity, learning and the decisions people need to own.",
       ],
       bullets: [
-        "Leadership — Executive and AI-era leadership, CEO and CHRO priorities, succession, transitions and the mandate behind a critical appointment.",
-        "Workforce — Workforce transformation, productivity, skills, workforce planning, internal mobility and the organisation of work.",
-        "AI & Work — Changing jobs, human-AI collaboration, AI readiness, future skills and the people implications of AI in recruitment.",
-        "GCC — India capability, GCC leadership, scaling, technology and AI talent, and the workforce behind an evolving centre.",
-        "Talent & Skills — Critical skills, talent intelligence, executive hiring, build-versus-buy decisions, salary context and candidate behaviour.",
+        "Talent Acquisition & Executive Search — Leadership mandates, permanent and specialist hiring, critical skills, talent-market context, RPO and GCC hiring roadmaps.",
+        "Workforce Solutions — Capacity, contract and temporary arrangements, contract-to-hire, payroll responsibilities and workforce planning.",
+        "Background Verification — Employment, education and reference facts, consent, agreed check scope and clear reporting.",
+        "HR Advisory & Fractional HR Leadership — HR foundations, organisation design, performance, part-time leadership, learning and human-AI work.",
       ],
     },
     {
@@ -181,6 +152,18 @@ export const hubEnhancements: Record<string, Section[]> = {
             "Critical-skills decision guide",
             "Compare internal mobility, development, specialist hiring and recruitment capacity against the work required.",
           ],
+          [
+            "Workforce-model decision guide",
+            "Compare duration, capacity, payroll and recruitment responsibilities before choosing the arrangement.",
+          ],
+          [
+            "Verification scope and reporting states",
+            "Agree the factual question, consent, recipients and clarification owner.",
+          ],
+          [
+            "Fractional HR remit",
+            "Define priorities, authority, availability and internal execution capacity.",
+          ],
         ],
       },
     },
@@ -189,6 +172,7 @@ export const hubEnhancements: Record<string, Section[]> = {
       title: "From a useful question to the right conversation.",
       paragraphs: [
         "If the question concerns a centre’s hiring sequence, explore GCC & Enterprise Capability. If it concerns the recruitment operating model, start with RPO. For a business-critical appointment, use the Executive Search mandate as the reference.",
+        "For staffing arrangements and payroll, explore Workforce Solutions. Use Background Verification to scope the checks and reporting needed, or HR Advisory to frame a function setup, people process or fractional leadership requirement. Start with Business Consulting when the broader business route still needs clarification.",
         "These are original general perspectives and illustrative planning aids, rather than client case studies or advice tailored to a particular organisation. Bring your actual context to a scoped business conversation. Arnold’s LinkedIn company page provides a separate route to professional updates.",
       ],
     },
@@ -299,7 +283,7 @@ export const hubEnhancements: Record<string, Section[]> = {
       id: "thank3",
       title: "Useful routes while you prepare.",
       paragraphs: [
-        "Contact shows the current enquiry state. Capabilities explains the six services, and Approach describes how responsibilities and decisions can be coordinated. If you are looking for a role, use Opportunities for the application route.",
+        "Contact shows the current enquiry state. Talent & Search connects hiring with the other three service pillars, and Approach describes how responsibilities and decisions can be coordinated. If you are looking for a role, use Opportunities for the application route.",
       ],
     },
   ],

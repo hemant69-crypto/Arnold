@@ -33,6 +33,26 @@ const media = {
     alt: "Illustrative side view of a person considering a city through an office window",
     position: "50% center",
   },
+  talentInterview: {
+    stem: "talent-interview",
+    alt: "Illustrative recruitment conversation in an office",
+    position: "50% center",
+  },
+  workforceTeam: {
+    stem: "workforce-team",
+    alt: "Illustrative team collaborating around a worktable",
+    position: "50% center",
+  },
+  verificationReview: {
+    stem: "verification-review",
+    alt: "Illustrative colleagues reviewing documents together",
+    position: "50% center",
+  },
+  advisoryMeeting: {
+    stem: "advisory-meeting",
+    alt: "Illustrative leadership discussion in a meeting room",
+    position: "50% center",
+  },
 } as const;
 let playbackOwner: HTMLVideoElement | null = null;
 
@@ -222,7 +242,6 @@ export function SectionVideo({
           Video unavailable. Showing the still image.
         </p>
       )}
-      <span className="cinema-credit">Illustrative footage</span>
     </section>
   );
 }

@@ -10,13 +10,32 @@ const availableRoutes = [
   ["opportunities", "/opportunities"],
   ["gcc", "/gcc"],
   ["training", "/capabilities/training"],
+  ["capabilities", "/capabilities"],
+  ["workforce", "/capabilities/workforce-solutions"],
+  ["verification", "/capabilities/background-verification"],
+  ["hr-advisory", "/capabilities/hr-advisory"],
+  ["about", "/about"],
 ];
 const selection = process.env.QA_PERFORMANCE_ROUTE;
+const group = process.env.QA_PERFORMANCE_GROUP;
+if (group && (group !== "four-pillars" || selection))
+  throw new Error("Unknown or conflicting performance group");
 if (selection && !availableRoutes.some(([name]) => name === selection))
   throw new Error("Unknown performance route");
 const routes = selection
   ? availableRoutes.filter(([name]) => name === selection)
-  : availableRoutes;
+  : group
+    ? availableRoutes.filter(([name]) =>
+        [
+          "home",
+          "capabilities",
+          "workforce",
+          "verification",
+          "hr-advisory",
+          "about",
+        ].includes(name),
+      )
+    : availableRoutes;
 await mkdir("output/lighthouse", { recursive: true });
 const results = [];
 for (const [name, path] of routes) {
@@ -91,7 +110,9 @@ const buildId = (await readFile(".next/BUILD_ID", "utf8")).trim();
 await writeFile(
   selection
     ? `output/performance-${selection}.json`
-    : "output/performance-summary.json",
+    : group
+      ? `output/performance-${group}.json`
+      : "output/performance-summary.json",
   JSON.stringify(
     {
       buildId,

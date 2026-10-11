@@ -36,12 +36,12 @@ const hubs: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Business ambition. People to make it happen.",
     description:
-      "Business consulting for your next stage of growth, connected to leadership, talent, workforce capability and GCC teams. Around 15 years of market experience.",
+      "Business consulting connected to talent acquisition and executive search, workforce solutions, background verification and HR advisory. 15+ years of market experience.",
   },
   "/capabilities": {
-    title: "Our capabilities",
+    title: "Talent Acquisition & Executive Search",
     description:
-      "Business consulting sets the direction. Leadership, Talent, Workforce, Capability and GCC connect the advice with six practical delivery services.",
+      "Permanent recruitment, technology and non-technology hiring, leadership and CXO search, specialist talent and RPO, connected to business priorities.",
   },
   "/expertise": {
     title: "Our expertise",
@@ -51,7 +51,7 @@ const hubs: Record<string, { title: string; description: string }> = {
   "/insights": {
     title: "Arnold Insights",
     description:
-      "Original perspectives on leadership, workforce, AI and work, GCC, talent and skills.",
+      "Original perspectives on talent and search, workforce solutions, background verification and HR advisory, with leadership, GCC, skills and AI context.",
   },
   "/opportunities": {
     title: "Find your next opportunity",
