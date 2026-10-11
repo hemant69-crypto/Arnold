@@ -39,7 +39,7 @@ export function Footer({
     <footer className="site-footer" data-menu-background>
       <div className="footer-top">
         <Link className="wordmark" href="/" aria-label="Arnold Consulting home">
-          <BrandLogo />
+          <BrandLogo surface="dark" />
         </Link>
         <p>
           Business consulting.

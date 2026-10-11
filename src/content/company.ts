@@ -29,6 +29,7 @@ export const company = {
     addressCountry: "IN",
   },
   logo: "/media/brand/arnold-logo.svg",
+  darkLogo: "/media/brand/arnold-logo-dark.png",
 } as const;
 
 // Search the supplied street address; no unverified coordinates or place ID.

@@ -8,13 +8,12 @@
   display: block;
   width: 198px;
   height: auto;
-  aspect-ratio: 568 / 192;
 }
 .site-header .brand-logo {
-  width: clamp(174px, 14vw, 202px);
+  width: clamp(174px, 18vw, 252px);
 }
 .footer-top .brand-logo {
-  width: 232px;
+  width: 288px;
 }
 .footer-main {
   display: grid;
@@ -123,10 +122,10 @@
     gap: 10px;
   }
   .site-header .brand-logo {
-    width: clamp(108px, 33vw, 152px);
+    width: clamp(108px, calc(100vw - 210px), 180px);
   }
   .footer-top .brand-logo {
-    width: 202px;
+    width: 244px;
   }
   .footer-main {
     margin-bottom: 50px;

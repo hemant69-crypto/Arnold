@@ -170,7 +170,7 @@ export function Header({ paths }: { available: string[]; paths: string[] }) {
         data-menu-background
         aria-label="Arnold Consulting home"
       >
-        <BrandLogo preload />
+        <BrandLogo surface="dark" preload />
       </Link>
       <nav className="nav-groups" aria-label="Primary" data-menu-background>
         {headerGroups.map((group, i) => (
