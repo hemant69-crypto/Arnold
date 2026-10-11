@@ -19,6 +19,8 @@ import { talentScenes, talentSections } from "@/content/talent-search";
 import { pillarScenes } from "@/content/pillars";
 import { FounderProfile } from "./FounderProfile";
 import { PillarIntro } from "./PillarIntro";
+import { BrandLogo } from "./BrandLogo";
+import { ContactDetails } from "./ContactDetails";
 export function Editorial({ page }: { page: EditorialPage }) {
   return (
     <>
@@ -266,6 +268,10 @@ export function Contact({
             consulting or bring a defined talent and search, workforce,
             verification, HR advisory or GCC requirement.
           </p>
+          <div className="contact-business" id="business-contact">
+            <BrandLogo />
+            <ContactDetails showPerson />
+          </div>
           <div className="notice">
             <h3>Looking for a role?</h3>
             <p>

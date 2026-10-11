@@ -1,5 +1,7 @@
 # Four pillars and annotation polish — 11 October 2026
 
+**Later supplied identity/contact update:** The current shared branding/contact changes and enhanced transparent-logo build `636edba0-fb3e-4e59-964e-aef12682b442` are documented in [BRAND_CONTACT_QA.md](BRAND_CONTACT_QA.md). The original colours are retained with no backdrop. All 20 relevant navigation/site/CSP/interaction scenarios, ten backend checks, five-width contact checks and the 124-file exposure scan pass; mobile performance median is 96. The earlier 61-scenario and hosted results below remain build-specific evidence for the preceding annotation work.
+
 Consulting remains core. Talent Acquisition & Executive Search uses the existing `/capabilities` URL, with substantive Workforce Solutions, Background Verification and HR Advisory pages. Useful Capabilities content is retained or integrated into the relevant pages. Six detailed service URLs and five original articles remain available; three new perspectives bring Insights to eight articles and the site to 33 registered routes plus 404.
 
 The founder chapter uses the user-approved, genuine-reference-based AI portrait and LinkedIn-sourced biography. Each pillar has a distinct original field and a relevant compressed, licensed stock interlude. All source credits are in `public/media/CREDITS.txt`. Production assets are original/licensed; reference-site code and media are not reused.

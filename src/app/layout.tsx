@@ -7,6 +7,7 @@ import "./motion.css";
 import "./content-enhancement.css";
 import "./four-pillars.css";
 import "./pillar-effects.css";
+import "./brand-contact.css";
 import { company } from "@/content/company";
 import { publicReleaseEnabled, productionOrigin } from "@/lib/site-config";
 import { contentPaths, getContent } from "@/lib/content";
@@ -50,9 +51,20 @@ export default async function RootLayout({
                   {
                     "@type": "Organization",
                     "@id": productionOrigin + "/#organization",
-                    name: "Arnold Consulting",
+                    name: company.name,
+                    legalName: company.legalName,
                     description: company.description,
                     url: productionOrigin,
+                    logo: productionOrigin + company.logo,
+                    email: company.email,
+                    telephone: company.phone,
+                    address: {
+                      "@type": "PostalAddress",
+                      streetAddress: company.address.streetAddress,
+                      addressLocality: company.address.addressLocality,
+                      postalCode: company.address.postalCode,
+                      addressCountry: company.address.addressCountry,
+                    },
                     sameAs: [company.linkedin],
                   },
                   {

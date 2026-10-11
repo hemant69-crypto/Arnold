@@ -1,0 +1,145 @@
+/* Supplied identity, shared across all routes. Artwork stays in its original proportions. */
+.wordmark {
+  flex-shrink: 0;
+  letter-spacing: normal;
+  line-height: 1;
+}
+.brand-logo {
+  display: block;
+  width: 198px;
+  height: auto;
+  aspect-ratio: 568 / 192;
+}
+.site-header .brand-logo {
+  width: clamp(174px, 14vw, 202px);
+}
+.footer-top .brand-logo {
+  width: 232px;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(0, 2.5fr);
+  gap: clamp(32px, 5vw, 72px);
+  margin-bottom: 80px;
+}
+.footer-main .footer-nav {
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 28px;
+}
+.footer-nav nav {
+  min-width: 0;
+}
+.contact-details {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.contact-details p {
+  margin: 0;
+}
+.contact-company {
+  font-weight: 600;
+}
+.contact-person {
+  margin-top: 15px !important;
+}
+.contact-person > span,
+.contact-address > span {
+  display: block;
+}
+.contact-person > span,
+.contact-label,
+.contact-direct dt {
+  color: #555d69;
+  font-size: 12px;
+}
+.contact-direct {
+  margin: 25px 0;
+}
+.contact-direct > div + div {
+  margin-top: 10px;
+}
+.contact-direct dd {
+  margin: 0;
+}
+.contact-details a {
+  display: inline-block;
+  min-height: 36px;
+  padding-block: 5px;
+  overflow-wrap: anywhere;
+}
+.contact-label {
+  margin-bottom: 6px !important;
+}
+.contact-map {
+  margin-top: 13px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 13px;
+}
+.footer-contact {
+  min-width: 0;
+  max-width: 340px;
+}
+.footer-contact .contact-person > span,
+.footer-contact .contact-label,
+.footer-contact .contact-direct dt {
+  color: #b8bdc7;
+}
+.footer-contact .contact-company {
+  max-width: 235px;
+  font-size: 15px;
+}
+.footer-contact .contact-address {
+  color: #d8dfea;
+  font-size: 13px;
+}
+.contact-business {
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.contact-business .brand-logo {
+  width: 218px;
+  margin-bottom: 28px;
+}
+.contact-business .contact-details p {
+  font-size: 14px;
+}
+.contact-business .contact-details .contact-label {
+  font-size: 12px;
+}
+@media (max-width: 1023px) {
+  .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .site-header {
+    gap: 10px;
+  }
+  .site-header .brand-logo {
+    width: clamp(108px, 33vw, 152px);
+  }
+  .footer-top .brand-logo {
+    width: 202px;
+  }
+  .footer-main {
+    margin-bottom: 50px;
+  }
+  .footer-main .footer-nav {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 35px 20px;
+  }
+  .contact-business .brand-logo {
+    width: 202px;
+  }
+  .contact-details a {
+    min-height: 44px;
+    padding-block: 8px;
+  }
+}

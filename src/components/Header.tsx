@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { company } from "@/content/company";
 import { headerGroups } from "@/content/pillars";
+import { BrandLogo } from "./BrandLogo";
 export function Header({ paths }: { available: string[]; paths: string[] }) {
   const pathname = usePathname();
   const details = useRef<HTMLDetailsElement>(null);
@@ -169,7 +170,7 @@ export function Header({ paths }: { available: string[]; paths: string[] }) {
         data-menu-background
         aria-label="Arnold Consulting home"
       >
-        arnold <span>consulting</span>
+        <BrandLogo preload />
       </Link>
       <nav className="nav-groups" aria-label="Primary" data-menu-background>
         {headerGroups.map((group, i) => (
@@ -272,7 +273,7 @@ export function Header({ paths }: { available: string[]; paths: string[] }) {
               </div>
             </nav>
             <div className="menu-bottom">
-              Rooted in India. Working with the USA.
+              Rooted in Bengaluru, India. Working with the USA.
               <div>
                 <a
                   className="menu-social"

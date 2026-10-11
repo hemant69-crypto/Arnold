@@ -1,12 +1,12 @@
 import { expandSections } from "./enhancements";
 import type { EditorialPage } from "./pages";
+import { company } from "./company";
 const baseLegalPages: EditorialPage[] = [
   {
     path: "/privacy",
     label: "Privacy",
     title: "Your information, handled deliberately.",
-    summary:
-      "This notice describes the current local preview. Public launch requires confirmation of the responsible legal entity, contact channel, providers and retention arrangements.",
+    summary: `This notice describes the current website preview for ${company.legalName}. Live website collection requires reviewed providers and retention arrangements.`,
     sections: [
       {
         id: "preview",
@@ -50,7 +50,8 @@ const baseLegalPages: EditorialPage[] = [
         id: "requests",
         title: "Questions and requests.",
         paragraphs: [
-          "The production privacy contact and the legal entity responsible for the website are awaiting confirmation. The local preview is not a channel for submitting privacy requests. These details must be published and the notice reviewed before launch.",
+          `For website or privacy questions, contact ${company.legalName} at ${company.email} or ${company.phone}. The office address is ${company.address.lines.join(", ")}. These direct contact details are also available on the Contact page.`,
+          "The website enquiry form remains unavailable. Provider responsibilities, request-handling procedures and the final privacy notice must be reviewed before live website collection begins.",
         ],
       },
     ],
@@ -59,8 +60,7 @@ const baseLegalPages: EditorialPage[] = [
     path: "/terms",
     label: "Website terms",
     title: "Clear conditions for using this website.",
-    summary:
-      "These terms describe the local website preview. The legal entity, jurisdiction and production contact must be confirmed and reviewed before public launch.",
+    summary: `These terms describe the website preview for ${company.legalName}. Applicable jurisdiction and the final terms require review before public launch.`,
     sections: [
       {
         id: "information",
@@ -91,14 +91,14 @@ const baseLegalPages: EditorialPage[] = [
         title: "Availability and enquiries.",
         paragraphs: [
           "The local preview has no connected live enquiry delivery service or candidate portal. A successful enquiry confirmation will be shown only after a configured provider accepts the request; acceptance does not establish inbox delivery or a human response.",
-          "Production availability, operating responsibilities and contact details must be confirmed before launch. No uninterrupted service or hiring outcome is promised through this preview.",
+          `Direct business contact is available at ${company.email} or ${company.phone}; the office address is listed on Contact. Production availability and operating responsibilities must be confirmed before launch. No uninterrupted service or hiring outcome is promised through this preview.`,
         ],
       },
       {
         id: "review",
         title: "Production review.",
         paragraphs: [
-          "The accountable owner must confirm the legal entity, applicable jurisdiction, contact details and final wording before publishing these terms. Until then, the website remains a local review environment.",
+          `The company identified for this website is ${company.legalName}, at ${company.address.lines.join(", ")}. The accountable owner must review applicable jurisdiction and final wording before publishing these terms. The website remains a review environment until that review is complete.`,
         ],
       },
     ],

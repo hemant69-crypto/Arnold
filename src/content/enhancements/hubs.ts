@@ -255,7 +255,7 @@ export const hubEnhancements: Record<string, Section[]> = {
       title: "Connect with Arnold.",
       paragraphs: [
         "Arnold Consulting is based in India and serves clients in the USA. The company’s Bengaluru roots inform its technology and GCC talent context. This describes the business footprint without implying a USA office.",
-        "The verified company LinkedIn page is available below for professional updates. Direct enquiry delivery is not connected in this preview. A monitored business email, phone and any detailed address will be added once the current Arnold contact record is confirmed.",
+        "Use the email or phone listed above to start a direct business conversation. Arnold’s office address and a Google Maps link are also available. The website enquiry form remains unavailable until its delivery service is connected. Visit the company LinkedIn page for professional updates.",
       ],
     },
   ],

@@ -74,7 +74,7 @@ export const legalEnhancements: Record<string, Section[]> = {
       id: "terms3",
       title: "Questions, corrections and updates.",
       paragraphs: [
-        "The Contact page identifies the available business route and the current state of enquiry sending. The local preview has no monitored website submission channel. A responsible production contact must be confirmed before this becomes a public route for website questions or corrections.",
+        "Use the direct business email or phone on Contact for website questions or corrections. That page also identifies Arnold’s office address and the current state of enquiry sending. The website form has no connected delivery service in this preview.",
         "The accountable owner must review the final terms and identify their effective or last-reviewed date before launch. Material updates should be recorded clearly. This preview does not claim that visiting the website retroactively accepts an unreviewed future agreement.",
       ],
     },
